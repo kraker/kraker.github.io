@@ -53,6 +53,15 @@ menu:
     #   url: /contact/
     #   weight: 6
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: true
+
 caches:
   images:
     dir: :cacheDir/images
