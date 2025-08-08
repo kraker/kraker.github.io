@@ -1,0 +1,58 @@
+---
+# huguo.yaml
+
+baseURL: https://kraker.github.io/
+title: Alex Kraker
+author: Alex Kraker
+copyright: "Copyright © 2025 Alex Kraker" 
+languageCode: en-us
+theme: risotto
+
+sectionPagesMenu: main
+pagination:
+  pagerSize: 3
+
+params:
+  noindex: false
+  theme:
+    pallette: papercolor-dark
+  about:
+    title: About
+    description: >
+      Alex Kraker is a Linux cyber engineer, coffee lover, adoring pet owner,
+      musician and autodidact.
+  socialLinks:
+    - icon: fa-brands fa-github
+      title: GitHub
+      url: https://github.com/kraker
+    - icon: fa-brands fa-linkedin
+      title: LinkedIn
+      url: https://www.linkedin.com/in/alexkraker/
+    - icon: fa-solid fa-envelope
+      title: Email
+      url: mailto:alex@alexkraker.com
+
+menu:
+  main:
+    - name: home
+      url: /
+      weight: 1
+    - name: about
+      url: /about/
+      weight: 2
+    # - name: projects
+    #   url: /projects/
+    #   weight: 3
+    - name: blog
+      url: /blog/
+      weight: 4
+    - name: notes
+      url: https://kraker.github.io/notes/home/
+      weight: 5
+    # - name: contact
+    #   url: /contact/
+    #   weight: 6
+
+caches:
+  images:
+    dir: :cacheDir/images
