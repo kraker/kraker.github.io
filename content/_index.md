@@ -11,7 +11,7 @@ Welcome to the internet home of Alex Kraker.
 * [/blog](/blog) Sometimes blogger
 * [/notes](https://kraker.github.io/notes/home) Extensive notetaking in the
   style of [zettelkasten](https://kraker.github.io/notes/20210209083017-zettelkasten/) for research
-* [/faq](/faq) Answer's to questions I'm frequently asked
+* [/faq](/faq) Answers to questions I'm frequently asked
 
 Socials
 
