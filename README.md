@@ -1,5 +1,7 @@
 # kraker.github.io
 
+[kraker.github.io](https://kraker.github.io)
+
 My minimalist personal site built in [Hugo](https://gohugo.io) using the
 [risotto](https://github.com/joeroe/risotto) theme and hosted on GitHub Pages.
 
