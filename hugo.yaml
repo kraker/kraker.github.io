@@ -15,11 +15,11 @@ pagination:
 params:
   noindex: false
   theme:
-    pallette: papercolor-dark
+    pallette: base16-dark
   about:
     title: About
     description: >
-      Alex Kraker is a Linux cyber engineer, coffee lover, adoring pet owner,
+      Alex Kraker is a Linux security engineer, coffee lover, adoring pet owner,
       musician and autodidact.
   socialLinks:
     - icon: fa-brands fa-github
