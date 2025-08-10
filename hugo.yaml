@@ -40,14 +40,14 @@ menu:
     - name: about
       url: /about/
       weight: 2
-    # - name: projects
-    #   url: /projects/
-    #   weight: 3
+    - name: projects
+      url: /projects/
+      weight: 3
     - name: blog
       url: /blog/
       weight: 4
     - name: notes
-      url: https://kraker.github.io/notes/home/
+      url: https://kraker.github.io/notes/
       weight: 5
     # - name: contact
     #   url: /contact/
