@@ -9,7 +9,7 @@ Welcome to the internet home of Alex Kraker.
 
 * [/about](/about) A little about me
 * [/blog](/blog) Sometimes blogger
-* [/notes](https://kraker.github.io/notes/home) Extensive notetaking in the
+* [/notes](https://kraker.github.io/notes/) Extensive notetaking in the
   style of [zettelkasten](https://kraker.github.io/notes/20210209083017-zettelkasten/) for research
 * [/faq](/faq) Answers to questions I'm frequently asked
 
