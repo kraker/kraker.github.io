@@ -8,6 +8,7 @@ description: Alex Kraker's home page
 Welcome to the internet home of Alex Kraker.
 
 * [/about](/about) A little about me
+* [/projects](/projects) My projects or projects I've contributed too
 * [/blog](/blog) Sometimes blogger
 * [/notes](https://kraker.github.io/notes/) Extensive notetaking in the
   style of [zettelkasten](https://kraker.github.io/notes/20210209083017-zettelkasten/) for research
@@ -18,9 +19,5 @@ Socials
 * [GitHub](https://github.com/kraker)
 * [LinkedIn](https://linkedin.com/in/alexkraker)
 
-Contact
-
-* [/mail](mailto:alex@alexkraker.com)
-
 Interested in working with me?\
-Somewhat outdated [/resume](/resume). (Update coming soon!)
+See my current [/resume](/resume), updated August 2025.

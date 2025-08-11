@@ -1,153 +1,83 @@
 ---
-title: Resume
-date: 2023-09-02
-draft: false
+title: Resume - Alex Kraker - August 2025
+date: 2025-08-10
+author: Alex Kraker
+description: My current resume
 ---
 
-_Download this resume as a [PDF](alexkraker_resume_2024-03-03.pdf)._
+## PROFESSIONAL SUMMARY
+Results-driven Systems Engineer with 5+ years of experience in **Linux engineering** and system administration, architecting, automating, and maintaining high-availability server environments across AWS, Azure, and GCP. Specialized in **Infrastructure as Code (IaC)** using **Ansible, Terraform, Packer, and GitLab CI** to deliver secure, repeatable, and maintainable deployments. Proven track record in large-scale systems implementations, configuration management, and performance optimization with a strong focus on **security hardening** and compliance. Collaborative leader and mentor dedicated to fostering team growth, promoting maintainability, and building comprehensive documentation and knowledge bases to ensure long-term operational excellence.
 
-# Alex Kraker
+## KEY ACHIEVEMENTS
+- Delivered DISA STIG-hardened RHEL “Golden Image” pipelines achieving 100% compliance baseline within 9 months for federal cloud environments.
+- Achieved 99.95% infrastructure uptime SLA by establishing consistent configuration baselines and resolving issues surfaced via observability tooling.
+- Implemented high-availability SAP Pacemaker clusters as a key deliverable in a $400K+ infrastructure project, deploying 3 SAP BW/4 clusters on RHEL/SLES.
+- Authored 20K+ lines of Infrastructure as Code (Ansible, Terraform, Packer) across 35+ projects, standardizing deployments and improving maintainability.
 
-+1 303 519 0703 | alex@alexkraker.com |
-[linkedin.com/in/alexkraker](https://linkedin.com/in/alexkraker) |
-[github.com/kraker](https://github.com/kraker)
+## PROFESSIONAL EXPERIENCE
+**Cloud Security Engineer (Contract)**
+Insight Global / Peraton Inc. – Remote | Sep 2024 – Present
+- Engineered automated **DISA STIG-hardened** RHEL “Golden Image” build and deployment pipelines using **Ansible, Packer, Terraform, and GitLab CI**, achieving 95% compliance in 3 months and 100% in 9 months.
+- Developed configuration automation to patch vulnerabilities and enforce compliance for new RHEL 9 AWS deployments.
+- Built and maintain **RHEL 9-based Docker “tools” image** used as the executor for GitLab CI pipeline runners across team-managed projects.
+- Authored deployment automation for observability and security agents integrating with SOC monitoring, XDR, IdM, vulnerability assessment, and SIEM.
+- Contributed to 25+ IaC projects (10K+ lines of code) and served as primary maintainer for 10+ infrastructure automation pipelines.
 
----
+**Sr. Linux System Administrator**
+Avvale – Remote | Mar 2024 – Sep 2024
+- Automated deployments for Linux and Windows infrastructure using **Ansible** and **Jenkins CI**, reducing manual configuration tasks.
+- Implemented security hardening, patch automation, and SSH key rotation across enterprise environments.
+- Designed maintainable infrastructure using **Configuration as Code** to improve long-term operability and consistency.
 
-Dedicated problem solver with over 5 years of experience as a Linux System
-Administrator and Systems Engineer. Proficiently managed and ensured the uptime
-of 800+ cloud servers, consistently achieving an SLA uptime of 99.5% or better
-and 99.95% or better for high-availability systems. Recognized as an Ansible
-automation subject matter expert (SME), proficient Kubernetes administrator, and
-seasoned Jenkins CI administrator, having contributed over 10,000 lines of
-code across 10 diverse projects, including 4 successful 'greenfield' initiatives
-that supported core infrastructure.
+**Linux System Administrator**
+Avvale – Remote | Feb 2022 – Feb 2024
+- Managed automated configuration for 800+ Linux and Windows servers across **AWS, Azure, and GCP**, balancing maintenance, configuration, and security hardening.
+- Implemented high-availability SAP Pacemaker clusters on RHEL/SLES as a key deliverable in a $400K+ infrastructure project, including deployment of 3 SAP BW/4 clusters.
+- Engineered **Teleport Kubernetes cluster deployment** for Identity Management (IdM) on **AWS EKS**, enabling secure access and streamlined operations.
+- Developed Bash and PowerShell scripts for DB2 backups, Prometheus monitoring, and Windows server onboarding.
+- Achieved 99.95% infrastructure uptime SLA by establishing consistent configuration baselines with **Configuration as Code** (Ansible) and proactively resolving issues identified through observability platforms such as **Prometheus** and **Grafana**.
+- Authored over 10K lines of Ansible code for standardized deployments and patching processes using **Jenkins CI** pipelines.
 
-## Skills
+**Managed Hosting Analyst I & II**
+InMotion Hosting – Remote | Apr 2021 – Feb 2022
+- Administered LAMP stack and cPanel hosting environments on virtualization platforms (**OpenStack, Virtuozzo**).
+- Scaled and optimized PHP-based CMS platforms (**WordPress, Drupal, Joomla, Magento**) for enterprise customers.
+- Co-authored the “Jr. Linux Sysadmin Pipeline” training program to develop internal talent.
+- Configured and optimized Apache, Nginx, MySQL, PostgreSQL, CSF, and Cisco ASA firewall systems.
 
-* **Linux System Administrator**
-  * Red Hat Enterprise Linux, CentOS, Rocky Linux, CloudLinux
-  * SUSE Linux Enterprise Server
-  * Ubuntu Server
-  * Pacemaker cluster resource manager
-* **Systems Engineer**
-  * Ansible
-  * Jenkins CI
-  * GitHub Actions
-  * Docker
-  * Kubernetes
-* Computer networking
-* Cybersecurity
-* Cloud computing: AWS, Azure, GCP
-* Virtualization: Proxmox VE, OpenStack, Virtuozzo
-* Scripting: Bash, Python, and PowerShell
+**Advanced Product Support Specialist**
+InMotion Hosting – Remote | Sep 2020 – Apr 2021
+- Provided advanced technical support for standalone cPanel servers, resolving escalations and applying security measures.
+- Migrated internal knowledge base to **Zendesk Guide**, improving documentation accessibility and support workflows.
 
-## Experience
+**Technical Support Specialist Expert**
+InMotion Hosting – Hybrid | Nov 2019 – Sep 2020
+- Delivered tier-one technical support for shared hosting and cPanel environments.
+- Managed remote helpdesk operations during COVID-19, troubleshooting RDP and VOIP connectivity for remote staff.
 
-### Linux System Administrator
+## CERTIFICATIONS
+- CompTIA Security+ – CompTIA | Issued Feb 2024 | Expires Feb 2027
+- CompTIA Network+ – CompTIA | Issued Mar 2022 | Expires Feb 2027
 
-[Avvale](https://www.avvale.com) | Tulsa, OK\
-_March 2022 -- Present_
+## ADDITIONAL INVOLVEMENT
+- Contributor, *Linux Upskill Challenge* (May 2023 – Present) – Contributed to Linux sysadmin skill development program.
+- Co-Founder, *PaperStreet* (May 2022 – Present) – Open-source initiative to support IT practitioner growth and skill building.
 
-* Primary author or key contributor of CaC type deployment automation supporting
-  both Linux and Windows server infrastructure using Ansible and Jenkins CI.
-  Projects supporting critical infrastructure include: Sudoers configuration
-  deployment, local user management and LDAP configuration, SSH key rotation and
-  SSH configuration deployment, Linux and Windows server onboarding, Linux and
-  Windows patch automation, among others.
-* Managed, configured, and optimized Red Hat, SUSE, and Ubuntu servers across
-  AWS, Azure, and GCP cloud platforms in day to day operations. Including
-  diagnosing performance related issues, configure or resolve file permissions
-  issues, boot failures, storage configuration and management with LVM, NFS
-  server and client configuration management and troubleshooting, diagnose and
-  resolve service failures, troubleshoot network connectivity issues, PAM
-  configuration and user access management, diagnose and resolve failed patches,
-  updates, and Enterprise Linux-related subscription issues.
-* Configured and maintained Pacemaker clusters on both SUSE and RedHat Enterprise
-  Linux for high-availability SAP solutions.
-* Primary engineer and architect of a Teleport cluster deployment for IdM built
-  in Kubernetes on AWS EKS.
-* Developed custom scripted solutions in Bash and PowerShell, highlights include
-  IBM DB2 database backups on GCP, Prometheus & Grafana integrations for
-  monitoring & alerting, and Windows server onboarding.
-* Cloud network troubleshooting and configuration & management of both Fortigate
-  and CheckPoint NGFW virtual cloud appliances. Experience with implementing
-  firewall policy rules and ACLs, diagnosing and resolving network reachability
-  issues, patching and upgrading of virtual firewall appliances, troubleshooting
-  and resolving site-to-site VPN connectivity issues.
+## TECHNICAL SKILLS
+**Cloud Platforms & Virtualization:**  
+Amazon Web Services (AWS), Amazon EKS, Azure, Google Cloud Platform (GCP), OpenStack, Virtuozzo, Proxmox VE
 
-### Managed Hosting Analyst I & II
+**Infrastructure as Code & Automation:**  
+Ansible, Terraform, Packer, GitLab CI/CD, Jenkins CI, Kubernetes, AWS EKS, Configuration as Code (CaC), Infrastructure as Code (IaC), YAML, Bash, Shell Scripting, PowerShell, Python
 
-[InMotion Hosting](https://www.inmotionhosting.com/) | Denver, CO\
-_April 2021 -- February 2022_
+**Security & Compliance:**  
+DISA STIG, DevSecOps, Security Compliance, Vulnerability Management, Patch Management, Identity Management (IdM), XDR, SIEM, Firewall Configuration (CSF, APF, Cisco ASA, CheckPoint, Fortinet), Access Control, System Hardening
 
-* Oversaw, configured, optimized, and resolved issues on Linux web-hosting
-  servers, primarily cPanel-based and running LAMP stacks on CentOS or
-  CloudLinux.
-* Proficiently installed, configured, and optimized a range of software and
-  systems, including Nginx, Apache, LightSpeed HTTPD, MySQL, PostgreSQL,
-  Varnish, PHP, BIND, FTP servers, Exim SMTP server, Dovecot IMAP server,
-  cPanel, ConfigServer Security and Firewall (CSF), Advanced Policy
-  Firewall (APF), and Cisco ASA Firewall.
-* Leveraged virtualization technologies like OpenStack and Virtuozzo.
-* Managed, troubleshot, and optimized PHP-based Content Management Systems, such
-  as WordPress, Drupal, Joomla, and Magento.
-* Co-authored the "Jr. Linux Sysadmin Pipeline" program to enhance the skills
-  development of aspiring Linux Sysadmins.
-* Acted as an escalation point for Sales, Advanced Support, and Technical
-  Support teams.
+**Systems Administration:**  
+Linux System Administration, Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), CentOS, Ubuntu, Windows Server Administration, Networking, DNS, System Configuration, Technical Documentation, Mentoring, Knowledge Management
 
-### Advanced Product Support Specialist
+**Web & Application Servers:**  
+Apache, Nginx, Varnish, LAMP Administration, PHP, MySQL, PostgreSQL, Bind, Exim, Docker
 
-[InMotion Hosting](https://www.inmotionhosting.com/) | Denver, CO\
-_September 2020 -- April 2021_
-
-* Provided advanced support as a Jr. Linux System Administrator for standalone
-  cPanel web servers, both on dedicated hardware and in virtualized environments.
-* Served as the escalation point for Technical Support Specialists.
-* Contributed as an internal knowledge base editor and consultant, facilitating
-  the migration of the entire internal knowledge base to Zendesk "Guide."
-
-### Technical Support Specialist & Technical Support Specialist Expert
-
-[InMotion Hosting](https://www.inmotionhosting.com/) | Denver, CO\
-_November 2019 -- September 2020_
-
-* Excelled as a first-tier technical support expert for shared web-hosting and
-  standalone cPanel web servers in a virtualized environment.
-* Managed the "Temporary Remote Helpdesk," providing support for remote
-  connectivity issues, RDP, and VOIP troubleshooting, with hands-on resolution
-  for both Windows and macOS systems. Played a crucial role in resolving network
-  connectivity problems during the abrupt transition to remote work due to the
-  COVID-19 Pandemic.
-* Trusted internal knowledge base editor.
-
-## Volunteer Experience
-
-* [PaperStreet](https://github.com/paperstreetco)\
-  Co-Founder | _May 2022 -- Present_\
-  Open Source project to facilitate professional and skills development for
-  IT practitioners and system administrators.
-* [Linux Upskill Challenge](https://linuxupskillchallenge.org/)\
-  Contributor & Linux Mentor | _May 2023 -- Present_\
-  Technical editor and volunteer Linux mentor on community Discord.
-
-## Certifications
-
-* [CompTIA Network+ Certification](https://www.credly.com/badges/cd704cc2-d049-420d-a2aa-068e8bb34c91/public_url)\
-  _March 2022 -- February 2027_
-* [CompTIA Security+ Certification](https://www.credly.com/badges/2c5df295-3311-4d10-a03e-76d2980e8be2/public_url)\
-  _February 2024 -- February 2027_
-
-## Hobbies & Interests
-
-Musician: piano, fiddle & composition, programming, open source, adventure,
-travel, health and fitness, sustainability, activism, science, innovation,
-technology, entrepreneurship.
-
----
-
-+1 303 519 0703 | alex@alexkraker.com |
-[linkedin.com/in/alexkraker](https://linkedin.com/in/alexkraker) |
-[github.com/kraker](https://github.com/kraker)
-
+**Content Management Systems:**  
+WordPress, Drupal, Joomla, Magento, Hugo, MkDocs
