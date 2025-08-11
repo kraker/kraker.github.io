@@ -19,3 +19,6 @@ draft: false
 
 ## Me in 5 minutes
 -->
+
+Interested in working with me?\
+See my current [/resume](/resume), updated August 2025.
