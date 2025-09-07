@@ -21,7 +21,7 @@ reading, but I must confess even after lots of practice I was never very good
 at it. Maybe I just didn't get it, but it felt like just glorified skimming to
 me. But I did pick up some habits around getting a sense of the overall
 structure of a book or chapter and making multiple passes at the information
-each with a different purpose. For technical learning I vary rarely read
+each with a different purpose. For technical learning I very rarely read
 every word on the page.
 
 ## Technical learning
