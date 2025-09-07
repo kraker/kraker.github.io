@@ -45,7 +45,7 @@ learning a skill like _programming_ was through this article by Derek Sivers.
 
 Spaced-repetition software (SRS), I use [Anki](https://apps.ankiweb.net/), is
 a force-multiplier when learning any technical subject. It's particularly
-useful when studying for certification exames, I've found.
+useful when studying for certification exams, I've found.
 
 ### Type it out yourself
 
