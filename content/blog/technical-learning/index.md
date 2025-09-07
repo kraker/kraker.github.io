@@ -50,7 +50,7 @@ useful when studying for certification exams, I've found.
 ### Type it out yourself
 
 I can't remember where I first received this advice, but when learning something
-like a programming language, type out all of the examples, exercies and labs
+like a programming language, type out all of the examples, exercises and labs
 yourself and get it to run. There seems to be a mind-body connection and muscle
 memory plays an important part in learning something like a programming language. This also forces you to slow down and really ingest and understand what you're
 learning. I think the tendency is to want to just copy and paste examples from
