@@ -1,9 +1,13 @@
 ---
 title: Technical Learning
 date: 2025-09-07
-draft: true
+draft: false
 author: Alex Kraker
 ---
+
+![Image of notebook, pen, laptop, and coffee](./nick-morrison-FHnnjk1Yj7Y-unsplash.jpg)
+
+Photo by <a href="https://unsplash.com/@nickmorrison?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nick Morrison</a> on <a href="https://unsplash.com/photos/macbook-pro-near-white-open-book-FHnnjk1Yj7Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
 # Technical Learning
 
@@ -23,10 +27,12 @@ every word on the page.
 ## Technical learning
 
 In terms of technical learning of skills used in software engineering, 
-infrastructure engineering, cyber engineering... basically any of the <term>+
+infrastructure engineering, cyber engineering... basically any of the _term_ +
 _engineering_ where the engineering being done is solving problems with
 computers, there's a few techniques that I've picked up which have served me
 well.
+
+> _Skip to the [tl;dr](#tldr) if you're short on time._
 
 ### Spaced Repetition Memory
 
@@ -62,7 +68,7 @@ useful for memorizing terminal commands and syntax.
 There's no substitute for real-world hands-on experience but working out
 engineering challenges in a lab environment is a decent facsimile I've found.
 
-This is the "learn <thing> the hard way" apprach that has become a marketing
+This is the "learn _thing_ the hard way" apprach that has become a marketing
 monikre for titles such as "Learn Python the Hard Way" or "Learn Kubernetes
 the Hard Way". When choosing study materials I think at least one resource
 should follow this apprach where the learner is encouraged to work through
