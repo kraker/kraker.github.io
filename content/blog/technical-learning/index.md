@@ -68,10 +68,10 @@ useful for memorizing terminal commands and syntax.
 There's no substitute for real-world hands-on experience but working out
 engineering challenges in a lab environment is a decent facsimile I've found.
 
-This is the "learn _thing_ the hard way" apprach that has become a marketing
-monikre for titles such as "Learn Python the Hard Way" or "Learn Kubernetes
+This is the "learn _thing_ the hard way" approach that has become a marketing
+moniker for titles such as "Learn Python the Hard Way" or "Learn Kubernetes
 the Hard Way". When choosing study materials I think at least one resource
-should follow this apprach where the learner is encouraged to work through
+should follow this approach where the learner is encouraged to work through
 the examples or labs while following along with the material. If the material
 doesn't have it you should invent your own.
 
