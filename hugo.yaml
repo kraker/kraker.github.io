@@ -62,6 +62,22 @@ markup:
     endLevel: 3
     ordered: true
 
+# Image processing configuration
+imaging:
+  # Default image processing quality
+  quality: 82
+  # Resize filter for better quality
+  resampleFilter: Lanczos
+  # Enable EXIF data stripping for privacy and smaller files
+  exif:
+    includeFields: ""
+    excludeFields: "GPS.*"
+    disableDate: false
+    disableLatLong: true
+  # Anchor for cropping (smart, center, topleft, etc.)
+  anchor: Smart
+
 caches:
   images:
     dir: :cacheDir/images
+    maxAge: "24h"
