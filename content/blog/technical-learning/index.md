@@ -175,8 +175,9 @@ If I had to sum up the most effective way that I learn it would be:
   courses, or tutorials.
 2. Work through the learning materials and type out the exercises, terminal
   commands, or labs manually yourself and get them to run.
-3. Pick a project you're interested in to hack on and work on it alongside
+3. Create a lab and automate it with tools like Vagrant and VirtualBox. 
+4. Pick a project you're interested in to hack on and work on it alongside
   while you're learning.
-4. Supplement by taking notes and doing SRS flashcards.
+5. Supplement by taking notes and doing Anki flashcards.
 
 That's it. Have fun learning!
