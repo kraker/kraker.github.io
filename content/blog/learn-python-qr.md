@@ -4,8 +4,6 @@ date: 2025-12-28
 draft: false
 ---
 
-# Learn Python One-pager
-
 This is my fairly opinionated quick reference on how to learn Python. This isn't
 so much a guide as it is something to launch from. There are already plenty of guides. I'm writing this with the
 novice in mind, but the seasoned programming veteran may derive something
