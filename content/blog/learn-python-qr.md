@@ -45,12 +45,11 @@ I'm kind of old school and I'm a book learner; not everybody is though. It's wor
 
 ### Python IDEs
 
-I'm partial to VSCode for just about any type of development these days. I'm
-a reformed Vim elitist you might say. For the novice,, my advice is to learn
+I'm partial to VSCode for just about any type of development these days. For the novice, my advice is to learn
 one general purpose code editor (not necessarioy an IDE...) like VSCode and
 stick with it for a while.
 
-1. VSCode + Microsofts [Python](https://code.visualstudio.com/docs/languages/python) is probably fine to start.
+1. VSCode + [Microsoft's Python](https://code.visualstudio.com/docs/languages/python) extension is probably fine to start.
 2. [PyCharm](https://www.jetbrains.com/pycharm/) if you really must have a Python IDE.
 
 ### Python Interpreter
