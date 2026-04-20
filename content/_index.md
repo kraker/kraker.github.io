@@ -14,13 +14,14 @@ cascade:
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
-  I publish the field references&nbsp;<br class="hx:sm:block hx:hidden" />I wish existed.
+  Linux security engineer.&nbsp;<br class="hx:sm:block hx:hidden" />Red Hat ecosystem practitioner.
 {{< /hextra/hero-headline >}}
 </div>
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  Linux security engineer&nbsp;<br class="hx:sm:block hx:hidden" />and Red Hat ecosystem practitioner.
+  Security automation at scale —&nbsp;<br class="hx:sm:block hx:hidden" />
+  compliance and hardening shipped as code, not enforced by quarterly audits.
 {{< /hextra/hero-subtitle >}}
 </div>
 
@@ -38,17 +39,22 @@ hands-on reference for RHEL 10 and the EX200 exam, written from inside
 the work. Free, CC BY-NC-SA, chapters ship as they're tested.
 Predecessor repo: [kraker/rhcsa](https://github.com/kraker/rhcsa).
 
-**Working notes.** [Blog posts](/blog) on real problems — SELinux,
-STIG hardening, Ansible patterns, exam reflections, automation failures.
-Short-form, field-tested, first-person.
+**Working notes.** [Blog posts](/blog) on real problems — RHEL, Ansible,
+SELinux, STIG hardening, exam reflections, automation failures.
+Short-form, field-tested, first-person. Broader than the consulting
+niche on purpose.
 
 **Community.** Contributing to [ProLUG](https://prolug.org) and the
 [Linux Upskill Challenge](https://linuxupskillchallenge.org/). Public
 repos on [GitHub](https://github.com/kraker).
 
-Available for Red Hat / Ansible / RHEL-security consulting on select
-engagements via partner channel.
-[Email](mailto:alex@alexkraker.com) to start a conversation.
+## For hire
+
+Consulting on **security automation at scale** — STIG pipelines,
+compliance-as-code, and hardening embedded in IaC for organizations
+running regulated Linux at scale (federal, fintech, healthcare).
+Engagements via Merrick partner channel.
+[Email](mailto:alex@alexkraker.com) with scope and rough timing.
 
 ## Recent posts
 

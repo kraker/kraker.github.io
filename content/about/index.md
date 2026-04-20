@@ -23,11 +23,15 @@ and I help edit chapters for the
 
 ## For hire
 
-Available for Red Hat / Ansible / RHEL-security consulting on select
-engagements via partner channel. If you're running RHEL/AAP at scale
-and need someone fluent in the STIG edge cases, that's the lane. Email
-with scope and rough timing — I respond to everything that isn't
-obvious spam.
+Consulting on **security automation at scale** — STIG pipelines,
+compliance-as-code, and hardening embedded in IaC for organizations
+running regulated Linux at scale (federal, fintech, healthcare). The
+Field Manual and blog cover broader Linux / RHEL / Ansible territory;
+consulting stays narrower on purpose.
+
+Engagements via Merrick partner channel.
+[Email](mailto:alex@alexkraker.com) with scope and rough timing — I
+respond to everything that isn't obvious spam.
 
 ## Reach out
 
