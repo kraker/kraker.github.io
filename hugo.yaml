@@ -85,8 +85,8 @@ menu:
 
 params:
   description: >
-    Alex Kraker — Linux practitioner focused on Red Hat Enterprise Linux.
-    Notes, posts, and the work-in-progress RHCSA Field Manual.
+    Alex Kraker is a Linux security engineer, coffee lover, adoring pet owner,
+    musician and autodidact.
 
   externalLinkDecoration: true
 
