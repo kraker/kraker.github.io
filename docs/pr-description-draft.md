@@ -26,7 +26,7 @@ Positioning shift toward Red Hat Consulting + *The RHCSA Field Manual*. Homepage
   - `404.html` — Hextra-style 404 with links back to Home / Blog / About.
 - **Content**:
   - `content/_index.md` — Hextra `hextra-home` layout. Hero badge → Field Manual repo, headline, subtitle, two CTAs (Blog, Field Manual), Recent posts. Sidebar cascade suppresses the nav tree site-wide.
-  - `content/about/index.md` — practitioner-framed bio, consulting positioning, Field Manual pointer. Keeps `head-shot-2.jpg`. Draft — awaiting revisions.
+  - `content/about/index.md` — **unchanged**. The live `/about/` keeps its original risotto bio verbatim so the URL and personal-voice content stay authentic while a rewrite is reviewed. The Claude-drafted rewrite is parked at `docs/drafts/about-bio.md` with review notes.
   - `content/projects/_index.md` — reorganized around RHCSA Field Manual + `kraker/rhcsa` as primary, Linux Upskill Challenge + PaperStreet as past.
   - `content/blog/_index.md` — `type: blog` + `cascade.type: blog`, so Hextra's blog layouts are used.
 - **Assets**:
