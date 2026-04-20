@@ -1,26 +1,58 @@
 ---
-title: Home
-description: Alex Kraker's home page
+title: Alex Kraker
+layout: hextra-home
+draft: true
 cascade:
   sidebar:
     hide: true
 ---
 
-<img src="head-shot-3.jpg" width="225" height="225">
+{{< hextra/hero-badge link="https://github.com/kraker/rhcsa-field-manual" >}}
+  <span>In progress: The RHCSA Field Manual</span>
+  {{< icon name="arrow-circle-right" attributes="height=14" >}}
+{{< /hextra/hero-badge >}}
 
-Welcome to the internet home of Alex Kraker.
+<div class="hx:mt-6 hx:mb-6">
+{{< hextra/hero-headline >}}
+  I publish the field references&nbsp;<br class="hx:sm:block hx:hidden" />I wish existed.
+{{< /hextra/hero-headline >}}
+</div>
 
-* [/about](/about) A little about me
-* [/projects](/projects) My projects or projects I've contributed too
-* [/blog](/blog) Sometimes blogger
-* [/notes](https://kraker.github.io/notes/) Extensive notetaking in the
-  style of [zettelkasten](https://kraker.github.io/notes/20210209083017-zettelkasten/) for research
-* [/faq](/faq) Answers to questions I'm frequently asked
+<div class="hx:mb-12">
+{{< hextra/hero-subtitle >}}
+  Linux and automation engineer.&nbsp;<br class="hx:sm:block hx:hidden" />
+  Red Hat specialist in practice. FOSS contributor by default.
+{{< /hextra/hero-subtitle >}}
+</div>
 
-Socials
+<div class="hx:mb-6">
+{{< hextra/hero-button text="Read the Field Manual" link="https://github.com/kraker/rhcsa-field-manual" >}}
+&nbsp;
+{{< hextra/hero-button text="Blog →" link="/blog" style="background-color: transparent; border: 1px solid currentColor;" >}}
+</div>
 
-* [GitHub](https://github.com/kraker)
-* [LinkedIn](https://linkedin.com/in/alexkraker)
+## What's here
 
-Interested in working with me?\
-See my current [/resume](/resume), updated August 2025.
+**Field references.** The
+[RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual) —
+a hands-on reference for RHEL 10 and the EX200 exam, written from
+inside the work. Free, CC BY-NC-SA, chapters ship as they're tested.
+Predecessor repo: [kraker/rhcsa](https://github.com/kraker/rhcsa).
+
+**Working notes.** [Blog posts](/blog) on real problems — SELinux,
+STIG hardening, Ansible patterns, exam reflections, automation
+failures. Short-form, field-tested, first-person.
+
+**Open-source stewardship.** Maintaining public repos, contributing
+to [ProLUG](https://prolug.org) and the
+[Linux Upskill Challenge](https://linuxupskillchallenge.org/).
+Open source is the default posture, not the exception — what isn't
+client-specific gets published.
+
+Available for Red Hat / Ansible / RHEL-security consulting via
+partner channel.
+[Email](mailto:alex@alexkraker.com) to start a conversation.
+
+## Recent posts
+
+{{< recent-posts limit="5" >}}

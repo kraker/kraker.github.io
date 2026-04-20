@@ -25,8 +25,8 @@ Positioning shift toward Red Hat Consulting + *The RHCSA Field Manual*. Homepage
   - `_shortcodes/recent-posts.html` — lists the N most recent `/blog/` posts; used on the homepage so it self-updates.
   - `404.html` — Hextra-style 404 with links back to Home / Blog / About.
 - **Content**:
-  - `content/_index.md` — **unchanged**. Keeps the original risotto welcome + link list + headshot verbatim so the hero positioning can be reviewed in the author's voice before going live. The Claude-drafted Hextra hero (headline, subtitle, CTAs, Recent posts) is parked at `docs/drafts/homepage.md`. The only addition: a `cascade.sidebar.hide: true` block in the frontmatter — this is a theme-level concern, not personal voice, and suppresses the docs-style nav tree on `/about/`, `/faq/`, `/projects/`, `/resume/`. The `recent-posts` shortcode is still defined at `layouts/_shortcodes/recent-posts.html` and usable whenever the homepage rewrite lands.
-  - `content/about/index.md` — **unchanged**. The live `/about/` keeps its original risotto bio verbatim so the URL and personal-voice content stay authentic while a rewrite is reviewed. The Claude-drafted rewrite is parked at `docs/drafts/about-bio.md` with review notes.
+  - `content/_index.md` — **draft rewrite aligned with `alexkraker_brand_spec_v1.md`**. Frontmatter `draft: true`; `hugo server -D` shows it, `hugo --minify` (CI) excludes it. Hextra `hextra-home` layout: hero badge → Field Manual, headline "I publish the field references I wish existed." (direct from the brand spec's positioning), subtitle "Linux and automation engineer. Red Hat specialist in practice. FOSS contributor by default." (FOSS-first framing per the spec), CTAs (Field Manual primary, Blog secondary), "What's here" covering the three pillars (field references, working notes, FOSS stewardship) + consulting availability, Recent posts via the shortcode. **⚠ Flip `draft: false` before merging** or `/` 404s on the live site.
+  - `content/about/index.md` — **draft rewrite aligned with the brand spec**. Frontmatter `draft: true`. First-person, practitioner voice, FOSS-first identity, Red Hat framed as specialty. "What I'm working on" enumerates Field Manual / kraker/rhcsa / ProLUG / Linux Upskill Challenge / day job. Explicit "For hire" block for consulting. Personal-life content (hobbies, dog) dropped per the spec's "not a personal-life surface" guardrail. **⚠ Flip `draft: false` before merging** or `/about/` 404s on the live site.
   - `content/projects/_index.md` — reorganized around RHCSA Field Manual + `kraker/rhcsa` as primary, Linux Upskill Challenge + PaperStreet as past.
   - `content/blog/_index.md` — `type: blog` + `cascade.type: blog`, so Hextra's blog layouts are used.
 - **Assets**:
@@ -39,7 +39,7 @@ Positioning shift toward Red Hat Consulting + *The RHCSA Field Manual*. Homepage
 
 ## URL-level diff vs. live
 
-Expected delta: **zero**. Inventory cross-check against the live slugs is in `docs/migration-inventory.md` — every pre-migration URL still renders in the new build:
+Expected delta after draft flags are flipped: **zero**. Inventory cross-check against the live slugs is in `docs/migration-inventory.md` — every pre-migration URL still renders in the new build (**provided `draft: true` on `/` and `/about/` is flipped to `false` first** — otherwise those two URLs 404 in production):
 
 - `/about/`, `/blog/`, `/faq/`, `/projects/`, `/resume/`
 - `/blog/grit/`, `/blog/kvdo/`, `/blog/learn-ansible/`, `/blog/learn-devops/`, `/blog/learn-python-qr/`, `/blog/linux-sysadmin/`, `/blog/rhel-vagrant/`, `/blog/second-brain/`, `/blog/technical-learning/`
