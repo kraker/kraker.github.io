@@ -31,7 +31,7 @@ cascade:
 {{< hextra/hero-button text="Blog →" link="/blog" style="background-color: transparent; border: 1px solid currentColor;" >}}
 </div>
 
-## What's here
+<!-- ## What's here
 
 **Field references.** The
 [RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual) — a
@@ -47,7 +47,7 @@ niche on purpose.
 **Community.** Contributing to [ProLUG](https://prolug.org) and the
 [Linux Upskill Challenge](https://linuxupskillchallenge.org/). Public
 repos on [GitHub](https://github.com/kraker).
-
+-->
 ## For hire
 
 Consulting on **security automation at scale** — STIG pipelines,
@@ -55,7 +55,3 @@ compliance-as-code, and hardening embedded in IaC for organizations
 running regulated Linux at scale (federal, fintech, healthcare).
 Engagements via Merrick partner channel.
 [Email](mailto:alex@alexkraker.com) with scope and rough timing.
-
-## Recent posts
-
-{{< recent-posts limit="5" >}}

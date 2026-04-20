@@ -68,17 +68,25 @@ menu:
       name: About
       pageRef: /about
       weight: 4
-    - name: Search
+    - identifier: resume
+      name: Resume
+      pageRef: /resume
       weight: 5
+    - identifier: faq
+      name: FAQ
+      pageRef: /faq
+      weight: 6
+    - name: Search
+      weight: 7
       params:
         type: search
     - name: RSS
-      weight: 6
+      weight: 8
       url: /blog/index.xml
       params:
         icon: rss
     - name: GitHub
-      weight: 7
+      weight: 9
       url: https://github.com/kraker
       params:
         icon: github
@@ -145,15 +153,6 @@ params:
   #   analytics:
   #     goatCounter:
   #       code: "kraker"
-
-  # Socials surfaced by theme partials / footer
-  socials:
-    - name: GitHub
-      url: https://github.com/kraker
-    - name: LinkedIn
-      url: https://www.linkedin.com/in/alexkraker/
-    - name: Email
-      url: mailto:alex@alexkraker.com
 
 # Image processing — preserved from risotto config
 imaging:
