@@ -1,26 +1,35 @@
 ---
-title: Home
-description: Alex Kraker's home page
+title: Alex Kraker
+layout: hextra-home
 cascade:
   sidebar:
     hide: true
 ---
 
-<img src="head-shot-3.jpg" width="225" height="225">
+{{< hextra/hero-badge link="https://github.com/kraker/rhcsa-field-manual" >}}
+  <span>Work in progress: The RHCSA Field Manual</span>
+  {{< icon name="arrow-circle-right" attributes="height=14" >}}
+{{< /hextra/hero-badge >}}
 
-Welcome to the internet home of Alex Kraker.
+<div class="hx:mt-6 hx:mb-6">
+{{< hextra/hero-headline >}}
+  Linux infrastructure,&nbsp;<br class="hx:sm:block hx:hidden" />done carefully.
+{{< /hextra/hero-headline >}}
+</div>
 
-* [/about](/about) A little about me
-* [/projects](/projects) My projects or projects I've contributed too
-* [/blog](/blog) Sometimes blogger
-* [/notes](https://kraker.github.io/notes/) Extensive notetaking in the
-  style of [zettelkasten](https://kraker.github.io/notes/20210209083017-zettelkasten/) for research
-* [/faq](/faq) Answers to questions I'm frequently asked
+<div class="hx:mb-12">
+{{< hextra/hero-subtitle >}}
+  Alex Kraker — Red Hat Enterprise Linux practitioner.&nbsp;<br class="hx:sm:block hx:hidden" />
+  Notes, posts, and the in-progress RHCSA Field Manual.
+{{< /hextra/hero-subtitle >}}
+</div>
 
-Socials
+<div class="hx:mb-6">
+{{< hextra/hero-button text="Read the blog" link="/blog" >}}
+&nbsp;
+{{< hextra/hero-button text="The RHCSA Field Manual →" link="https://github.com/kraker/rhcsa-field-manual" style="background-color: transparent; border: 1px solid currentColor;" >}}
+</div>
 
-* [GitHub](https://github.com/kraker)
-* [LinkedIn](https://linkedin.com/in/alexkraker)
+## Recent posts
 
-Interested in working with me?\
-See my current [/resume](/resume), updated August 2025.
+{{< recent-posts limit="5" >}}
