@@ -20,8 +20,7 @@ cascade:
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
-  Linux and automation engineer.&nbsp;<br class="hx:sm:block hx:hidden" />
-  Red Hat specialist in practice. FOSS contributor by default.
+  Linux security engineer&nbsp;<br class="hx:sm:block hx:hidden" />and Red Hat ecosystem practitioner.
 {{< /hextra/hero-subtitle >}}
 </div>
 
@@ -34,23 +33,21 @@ cascade:
 ## What's here
 
 **Field references.** The
-[RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual) —
-a hands-on reference for RHEL 10 and the EX200 exam, written from
-inside the work. Free, CC BY-NC-SA, chapters ship as they're tested.
+[RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual) — a
+hands-on reference for RHEL 10 and the EX200 exam, written from inside
+the work. Free, CC BY-NC-SA, chapters ship as they're tested.
 Predecessor repo: [kraker/rhcsa](https://github.com/kraker/rhcsa).
 
 **Working notes.** [Blog posts](/blog) on real problems — SELinux,
-STIG hardening, Ansible patterns, exam reflections, automation
-failures. Short-form, field-tested, first-person.
+STIG hardening, Ansible patterns, exam reflections, automation failures.
+Short-form, field-tested, first-person.
 
-**Open-source stewardship.** Maintaining public repos, contributing
-to [ProLUG](https://prolug.org) and the
-[Linux Upskill Challenge](https://linuxupskillchallenge.org/).
-Open source is the default posture, not the exception — what isn't
-client-specific gets published.
+**Community.** Contributing to [ProLUG](https://prolug.org) and the
+[Linux Upskill Challenge](https://linuxupskillchallenge.org/). Public
+repos on [GitHub](https://github.com/kraker).
 
-Available for Red Hat / Ansible / RHEL-security consulting via
-partner channel.
+Available for Red Hat / Ansible / RHEL-security consulting on select
+engagements via partner channel.
 [Email](mailto:alex@alexkraker.com) to start a conversation.
 
 ## Recent posts
