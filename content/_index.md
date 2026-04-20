@@ -7,11 +7,6 @@ cascade:
     hide: true
 ---
 
-{{< hextra/hero-badge link="https://github.com/kraker/rhcsa-field-manual" >}}
-  <span>In progress: The RHCSA Field Manual</span>
-  {{< icon name="arrow-circle-right" attributes="height=14" >}}
-{{< /hextra/hero-badge >}}
-
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-headline >}}
   Linux security engineer.&nbsp;<br class="hx:sm:block hx:hidden" />Red Hat ecosystem practitioner.
@@ -26,32 +21,25 @@ cascade:
 </div>
 
 <div class="hx:mb-6">
-{{< hextra/hero-button text="Read the Field Manual" link="https://github.com/kraker/rhcsa-field-manual" >}}
+{{< hextra/hero-button text="Read the blog" link="/blog" >}}
 &nbsp;
-{{< hextra/hero-button text="Blog →" link="/blog" style="background-color: transparent; border: 1px solid currentColor;" >}}
+{{< hextra/hero-button text="Study guides →" link="#study-guides" style="background-color: transparent; border: 1px solid currentColor;" >}}
 </div>
 
-<!-- ## What's here
+## Study guides
 
-**Field references.** The
-[RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual) — a
-hands-on reference for RHEL 10 and the EX200 exam, written from inside
-the work. Free, CC BY-NC-SA, chapters ship as they're tested.
-Predecessor repo: [kraker/rhcsa](https://github.com/kraker/rhcsa).
+Open-source study guides for the Red Hat certification exams:
 
-**Working notes.** [Blog posts](/blog) on real problems — RHEL, Ansible,
-SELinux, STIG hardening, exam reflections, automation failures.
-Short-form, field-tested, first-person. Broader than the consulting
-niche on purpose.
+- [**RHCSA** (EX200)](https://kraker.github.io/rhcsa/) — used widely
+  enough to earn [ProLUG](https://prolug.org)'s standing recommend.
+- [**RHCE** (EX294)](https://kraker.github.io/rhce/)
 
-**Community.** Contributing to [ProLUG](https://prolug.org) and the
-[Linux Upskill Challenge](https://linuxupskillchallenge.org/). Public
-repos on [GitHub](https://github.com/kraker).
--->
-## For hire
+## Work with me
 
-Consulting on **security automation at scale** — STIG pipelines,
-compliance-as-code, and hardening embedded in IaC for organizations
-running regulated Linux at scale (federal, fintech, healthcare).
-Engagements via Merrick partner channel.
-[Email](mailto:alex@alexkraker.com) with scope and rough timing.
+Linux security and automation engineering — RHEL, Ansible, AAP, STIG
+pipelines, compliance-as-code. Open to senior / principal engineering
+roles in regulated Linux environments.
+
+Reach me via
+[LinkedIn](https://www.linkedin.com/in/alexkraker/) or
+[email](mailto:alex@alexkraker.com).

@@ -68,28 +68,29 @@ menu:
       name: About
       pageRef: /about
       weight: 4
-    - identifier: resume
-      name: Resume
-      pageRef: /resume
-      weight: 5
     - identifier: faq
       name: FAQ
       pageRef: /faq
-      weight: 6
+      weight: 5
     - name: Search
-      weight: 7
+      weight: 6
       params:
         type: search
     - name: RSS
-      weight: 8
+      weight: 7
       url: /blog/index.xml
       params:
         icon: rss
     - name: GitHub
-      weight: 9
+      weight: 8
       url: https://github.com/kraker
       params:
         icon: github
+    - name: LinkedIn
+      weight: 9
+      url: https://www.linkedin.com/in/alexkraker/
+      params:
+        icon: linkedin
 
 params:
   description: >
@@ -121,7 +122,7 @@ params:
   footer:
     width: wide
     displayCopyright: true
-    displayPoweredBy: false
+    displayPoweredBy: true
 
   displayUpdatedDate: true
   dateFormat: "January 2, 2006"
