@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    text { font-family: 'Berkeley Mono', ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, Consolas, monospace; font-weight: 700; font-size: 42px; dominant-baseline: central; text-anchor: middle; }
+    .bg { fill: #0a0a0a; }
+    .fg { fill: #f5f5f5; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f5f5f5; }
+      .fg { fill: #0a0a0a; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="8"/>
+  <text class="fg" x="32" y="34">ak</text>
+</svg>
