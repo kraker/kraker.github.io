@@ -1,3 +1,9 @@
-# .gitignore
-
+# Hugo
 public/
+.hugo_build.lock
+
+# Image optimization backups (produced by scripts/optimize-images.sh)
+image-backups/
+
+# Local Claude Code settings
+.claude/

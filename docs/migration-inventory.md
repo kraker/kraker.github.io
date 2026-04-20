@@ -1,0 +1,145 @@
+---
+title: Hextra migration inventory (Phase 0)
+date: 2026-04-20
+---
+
+Captured from `main` at commit `11c5c64` / tag `pre-hextra-backup` on 2026-04-20, before any migration work. This is the artifact the migration is validated against in Phase 8.
+
+## Current stack
+
+- Hugo **0.142.0 extended** (pinned in `.github/workflows/hugo.yaml`)
+- Local Hugo: 0.152.2 extended (Fedora build) — above Hextra's 0.146.0 floor, fine for local dev
+- Theme: **risotto** installed as a git submodule at `themes/risotto` (`.gitmodules` → `https://github.com/joeroe/risotto.git`)
+- Hosting: GitHub Pages via `.github/workflows/hugo.yaml` on push to `main`
+
+## Content layout
+
+| Path                 | .md count | Notes                                                   |
+| -------------------- | --------- | ------------------------------------------------------- |
+| `content/_index.md`  | 1         | Homepage                                                |
+| `content/about/`     | 1         | `index.md` + `head-shot-2.jpg` (page bundle)            |
+| `content/blog/`      | 11        | Mix of flat `.md` and page-bundle dirs                  |
+| `content/contact/`   | 1         | `index.md` — not linked in main nav                     |
+| `content/projects/`  | 1         | `_index.md` only                                        |
+| `content/resume/`    | 2         | `index.md` current, `Alex_Kraker_Resume-old.md` archive |
+| `content/faq.md`     | 1         | Flat single-file page                                   |
+| `content/head-shot-3.jpg` | —     | Sibling asset to `_index.md` (referenced via raw `<img>`) |
+
+## Blog posts (URLs to preserve — Phase 8 spot-check list)
+
+| Path                                         | Slug URL                         | Title                                                  | Date                      | Draft |
+| -------------------------------------------- | -------------------------------- | ------------------------------------------------------ | ------------------------- | ----- |
+| `content/blog/grit.md`                       | `/blog/grit/`                    | Grit                                                   | 2021-05-16                | false |
+| `content/blog/kvdo.md`                       | `/blog/kvdo/`                    | RHEL 9 kmod-kvdo bug                                   | 2025-08-02                | false |
+| `content/blog/learn-ansible/index.md`        | `/blog/learn-ansible/`           | On Learning Ansible                                    | 2023-11-08                | false |
+| `content/blog/learn-devops.md`               | `/blog/learn-devops/`            | DevOps Learning Resources                              | 2023-09-04                | false |
+| `content/blog/learn-python-qr.md`            | `/blog/learn-python-qr/`         | Learn Python Quickref                                  | 2025-12-28                | false |
+| `content/blog/linux-sysadmin.md`             | `/blog/linux-sysadmin/`          | How I Became a Linux Sysadmin in Less Than 2 Years     | 2021-05-20                | false |
+| `content/blog/rhel-vagrant/index.md`         | `/blog/rhel-vagrant/`            | Local Development Testing with RHEL and Vagrant        | 2024-10-10                | false |
+| `content/blog/second-brain/index.md`         | `/blog/second-brain/`            | My Personal Knowledge Base (aka "Second Brain")        | 2023-11-09                | false |
+| `content/blog/second-brain-in-vim.md`        | `/blog/second-brain-in-vim/`     | Second Brain In Vim                                    | *(none)*                  | **true** |
+| `content/blog/technical-learning/index.md`   | `/blog/technical-learning/`      | Technical Learning                                     | 2025-09-07                | false |
+
+## Frontmatter fields in use
+
+All posts use YAML (`---` fences). Fields observed across the sample:
+
+- `title` (all)
+- `date` (all except the one draft)
+- `draft` (all)
+- `author` (some — e.g. `_index.md`, `projects/_index.md`)
+- `tags` (one post has the key but empty; others omit it entirely)
+
+Date formats are mixed: some use full RFC3339 (`2021-05-16T18:39:24-06:00`), newer posts use plain `YYYY-MM-DD`. Both parse fine; Hextra should handle both.
+
+## Shortcodes in content
+
+**Zero.** `grep -rE '\{\{[%<] *[a-z]+' content/` returns no matches. No risotto-specific shortcode translations required in Phase 3.
+
+## Images
+
+All images referenced with standard Markdown (`![alt](path)`) or one raw `<img>` on the homepage. Image locations:
+
+- `content/head-shot-3.jpg` — homepage hero (referenced via `<img>` in `_index.md`; relies on `markup.goldmark.renderer.unsafe: true`)
+- `content/about/head-shot-2.jpg` — about-page headshot (page bundle)
+- `content/blog/learn-ansible/jonathan-chng-Ch8S4zHDQfE-unsplash.jpg`
+- `content/blog/rhel-vagrant/` — four PNG screenshots (+ matching `.webp` variants already generated by image-optimization step)
+- `content/blog/second-brain/` — two Unsplash JPEGs, two screenshots (+ `.webp` variants)
+- `content/blog/technical-learning/nick-morrison-FHnnjk1Yj7Y-unsplash.jpg`
+- `static/head-shot-2-cropped.jpg`, `static/head-shot-2-cropped.png`, `static/head-shot-2-cropped.xcf`, `static/head-shot-2.jpg`, `static/head-shot.jpg`
+
+No exotic shortcode-based image handling — all will carry over unchanged.
+
+## Current URL structure
+
+`hugo.yaml` does **not** set an explicit `permalinks` block. Risotto inherits Hugo's defaults:
+
+- Top-level single pages: `/{section}/` or `/{filename}/` → e.g. `/about/`, `/faq/`, `/resume/`, `/projects/`
+- Blog posts: `/blog/{slug}/` where slug comes from filename or bundle dir
+- RSS feeds: `/index.xml`, `/blog/index.xml`, `/tags/.../index.xml`
+
+**URLs to preserve (non-negotiable):**
+
+- `/about/`, `/blog/`, `/faq/`, `/projects/`, `/resume/`
+- Every blog post URL in the table above
+- `/index.xml`, `/blog/index.xml`, per-tag RSS
+- `/notes/` — see below
+
+## `/notes/` routing
+
+`/notes/` is **not** content in this repo. It resolves via GitHub Pages project-site routing: the separate repo `kraker/notes` has Pages enabled (`has_pages: true`, `homepage: https://kraker.github.io/notes/`), and GitHub routes `kraker.github.io/notes/` to that project's `gh-pages` branch.
+
+**Nothing in this repo controls `/notes/`.** The only mention is a top-nav menu entry in `hugo.yaml`:
+
+```yaml
+- name: notes
+  url: https://kraker.github.io/notes/
+  weight: 5
+```
+
+Replication: a top-nav link with the same absolute URL. No redirects, no `_redirects` file, no CNAME involvement.
+
+## Workflow (`.github/workflows/hugo.yaml`)
+
+- Triggers: `push` to `main`, `workflow_dispatch`
+- Hugo version: **0.142.0 extended** (pinned via env var)
+- Fetches submodules: `submodules: recursive` (needed for risotto; will become unnecessary after theme swap)
+- Node install step: no-op (`[[ -f package-lock.json ]] && npm ci || true`)
+- Build: `hugo --gc --minify --baseURL $pages_url --cacheDir $hugo_cache`
+- Deploy: `actions/deploy-pages@v4` with `actions/upload-pages-artifact@v3`
+- Deploy target: `github-pages` environment, unchanged Pages source
+
+Notable commented-out block: a Dart Sass install preamble — risotto didn't require it. Hextra doesn't either (Tailwind is precompiled in the module).
+
+## Current `hugo.yaml` knobs worth preserving
+
+- `baseURL: https://kraker.github.io/`
+- `title: Alex Kraker`
+- `author: Alex Kraker`
+- `pagination.pagerSize: 3`
+- `markup.goldmark.renderer.unsafe: true` (needed for the homepage `<img>`)
+- `markup.tableOfContents: { startLevel: 2, endLevel: 3, ordered: true }`
+- `imaging:` block — quality 82, Lanczos resample, EXIF GPS strip, Smart crop anchor
+- `caches.images:` — 24h cached image processing
+
+## Risotto-specific params that will be dropped
+
+- `params.theme.pallette: base16-dark`
+- `params.about.{title,description}` — moves into the About page content body
+- `params.socialLinks:` — menu-driven in risotto; Hextra exposes socials via `params.social` or a footer include
+
+## Open questions deferred to decision points in the plan
+
+- Phase 2: menu order; `/faq/` and `/resume/` — top nav vs footer? (plan stop point 1)
+- Phase 4: homepage copy and About bio rewrite (plan stop point 2)
+- Phase 5: Giscus `repoId`/`categoryId` — user must provide after registering the repo on giscus.app
+- Phase 5: GoatCounter code — assume `kraker` subdomain per plan; user confirms
+
+## Rollback
+
+Local tag `pre-hextra-backup` points at `main@11c5c64`. Until pushed to `origin`, rollback is purely local:
+
+```
+git checkout main
+git reset --hard pre-hextra-backup
+```
