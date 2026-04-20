@@ -1,80 +1,165 @@
 ---
-# huguo.yaml
+# hugo.yaml — Hextra
 
 baseURL: https://kraker.github.io/
 title: Alex Kraker
 author: Alex Kraker
-copyright: "Copyright © 2025 Alex Kraker" 
+copyright: "Copyright © 2026 Alex Kraker"
 languageCode: en-us
-theme: risotto
 
-sectionPagesMenu: main
+enableGitInfo: true
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
+  imports:
+    - path: github.com/imfing/hextra
+
+# Homepage + section output formats (RSS for sections preserves /index.xml and /blog/index.xml)
+outputs:
+  home: [html, rss, llms]
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
 pagination:
-  pagerSize: 3
-
-params:
-  noindex: false
-  theme:
-    pallette: base16-dark
-  about:
-    title: About
-    description: >
-      Alex Kraker is a Linux security engineer, coffee lover, adoring pet owner,
-      musician and autodidact.
-  socialLinks:
-    - icon: fa-brands fa-github
-      title: GitHub
-      url: https://github.com/kraker
-    - icon: fa-brands fa-linkedin
-      title: LinkedIn
-      url: https://www.linkedin.com/in/alexkraker/
-    - icon: fa-solid fa-envelope
-      title: Email
-      url: mailto:alex@alexkraker.com
-
-menu:
-  main:
-    - name: home
-      url: /
-      weight: 1
-    - name: about
-      url: /about/
-      weight: 2
-    - name: projects
-      url: /projects/
-      weight: 3
-    - name: blog
-      url: /blog/
-      weight: 4
-    - name: notes
-      url: https://kraker.github.io/notes/
-      weight: 5
-    # - name: contact
-    #   url: /contact/
-    #   weight: 6
+  pagerSize: 10
 
 markup:
+  highlight:
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
   tableOfContents:
     startLevel: 2
     endLevel: 3
     ordered: true
 
-# Image processing configuration
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 1
+    - identifier: notes
+      name: Notes
+      url: https://kraker.github.io/notes/
+      weight: 2
+      params:
+        icon: external-link
+    - identifier: projects
+      name: Projects
+      pageRef: /projects
+      weight: 3
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 4
+    - name: Search
+      weight: 5
+      params:
+        type: search
+    - name: RSS
+      weight: 6
+      url: /blog/index.xml
+      params:
+        icon: rss
+    - name: GitHub
+      weight: 7
+      url: https://github.com/kraker
+      params:
+        icon: github
+
+params:
+  description: >
+    Alex Kraker — Linux practitioner focused on Red Hat Enterprise Linux.
+    Notes, posts, and the work-in-progress RHCSA Field Manual.
+
+  externalLinkDecoration: true
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: wide
+
+  page:
+    width: wide
+    displayPagination: false
+
+  blog:
+    list:
+      displayTags: true
+    article:
+      displayPagination: true
+
+  theme:
+    # Default landing theme is dark per migration plan. Toggle still available.
+    default: dark
+    displayToggle: true
+
+  footer:
+    width: wide
+    displayCopyright: true
+    displayPoweredBy: false
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+
+  # Open Graph / Twitter defaults (Hextra reads these via internal head templates)
+  images:
+    - head-shot-3.jpg
+
+  # Comments — Giscus. Kept disabled until repoId/categoryId are added from giscus.app.
+  comments:
+    enable: false
+    type: giscus
+    giscus:
+      repo: kraker/kraker.github.io
+      repoId: ""
+      category: ""
+      categoryId: ""
+
+  # Analytics — GoatCounter. Block is omitted until the 'kraker' subdomain is
+  # registered at goatcounter.com; Hextra treats an empty `code` as an error.
+  # To enable, add:
+  #   analytics:
+  #     goatCounter:
+  #       code: "kraker"
+
+  # Socials surfaced by theme partials / footer
+  socials:
+    - name: GitHub
+      url: https://github.com/kraker
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/alexkraker/
+    - name: Email
+      url: mailto:alex@alexkraker.com
+
+# Image processing — preserved from risotto config
 imaging:
-  # Default image processing quality
   quality: 82
-  # Resize filter for better quality
   resampleFilter: Lanczos
-  # Enable EXIF data stripping for privacy and smaller files
   exif:
     includeFields: ""
     excludeFields: "GPS.*"
     disableDate: false
     disableLatLong: true
-  # Anchor for cropping (smart, center, topleft, etc.)
   anchor: Smart
 
 caches:
