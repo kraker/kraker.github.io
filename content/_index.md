@@ -1,6 +1,9 @@
 ---
 title: Home
 description: Alex Kraker's home page
+cascade:
+  sidebar:
+    hide: true
 ---
 
 <img src="head-shot-3.jpg" width="225" height="225">

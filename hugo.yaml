@@ -11,6 +11,10 @@ enableGitInfo: true
 enableInlineShortcodes: true
 enableRobotsTXT: true
 
+# Blog-primary site: suppress the docs-style sidebar globally. Applied via
+# cascade in content/_index.md so Hextra's blog layout (which manages its own
+# sidebar placeholder) isn't second-guessed by a site-level cascade.
+
 module:
   hugoVersion:
     extended: true
