@@ -62,8 +62,6 @@ menu:
       name: Notes
       url: https://kraker.github.io/notes/
       weight: 3
-      params:
-        icon: external-link
     - identifier: projects
       name: Projects
       pageRef: /projects
@@ -128,8 +126,8 @@ params:
     displayCopyright: true
     displayPoweredBy: true
 
-  displayUpdatedDate: true
-  dateFormat: "January 2, 2006"
+  # displayUpdatedDate: true
+  # dateFormat: "January 2, 2006"
 
   search:
     enable: true
