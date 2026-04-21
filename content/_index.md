@@ -24,8 +24,7 @@ cascade:
 <!--
   Linux security engineer.&nbsp;<br class="hx:sm:block hx:hidden" />Red Hat ecosystem practitioner.
 -->
-Linux security engineer. Maintainer of the open-source RHCSA and RHCE study guides.\
-Currently writing the "RHCSA Field Manual", stay tuned!
+Linux security engineer. Maintainer of the open-source RHCSA and RHCE study guides.
 {{< /hextra/hero-subtitle >}}
 </div>
 
