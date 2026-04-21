@@ -99,7 +99,12 @@ git push origin pre-hextra-backup
 
 - Iterating on homepage + About copy (decision 2 deferred to a later pass per your call)
 - Newsletter setup (Buttondown)
-- Enabling Giscus (needs giscus.app registration)
 - Enabling GoatCounter (needs account)
 - Tags on existing posts (you opted to leave untouched this round)
 - Field Manual `/rhcsa/` web companion, per-post OG image generation, `llms.txt`
+- Create social accounts: **Substack**, **Mastodon**, **Bluesky**. Once accounts exist, surface each from `/contact/` and (if desired) as icons in the top-nav icon row — Hextra ships a `mastodon` icon in its built-in set; Substack and Bluesky would need SVGs added via `assets/` or inline in a custom partial.
+- Contact form / spam-resistant reach mechanism (see current session discussion — mailto on `/contact/` is attracting spam).
+
+### Done in-flight (was here earlier)
+
+- ~~Enabling Giscus~~ — live on blog posts only, wired via `cascade.comments: true` on `content/blog/_index.md` + `params.comments.giscus` populated in `hugo.yaml`.
