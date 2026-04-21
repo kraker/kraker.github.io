@@ -74,22 +74,26 @@ menu:
       name: FAQ
       pageRef: /faq
       weight: 6
-    - name: Search
+    - identifier: contact
+      name: Contact
+      pageRef: /contact
       weight: 7
+    - name: Search
+      weight: 8
       params:
         type: search
     - name: RSS
-      weight: 8
+      weight: 9
       url: /blog/index.xml
       params:
         icon: rss
     - name: GitHub
-      weight: 9
+      weight: 10
       url: https://github.com/kraker
       params:
         icon: github
     - name: LinkedIn
-      weight: 10
+      weight: 11
       url: https://www.linkedin.com/in/alexkraker/
       params:
         icon: linkedin
