@@ -1,0 +1,11 @@
+/*
+ * Hextra's hextra-home layout sets
+ * min-height: calc(100vh - var(--navbar-height)) on <main>, which forces
+ * short pages (notably the homepage) to fill the viewport and pushes the
+ * footer well below the content. Dropping the floor lets the footer rise
+ * to meet the content. Long pages (blog posts, FAQ) are unaffected —
+ * their content already exceeds the floor so this override is a no-op.
+ */
+main#content {
+  min-height: 0;
+}
