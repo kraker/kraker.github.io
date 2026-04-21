@@ -1,0 +1,12 @@
+{{- /*
+Secondary nav row rendered above Hextra's default copyright area.
+Entries come from menu.footer in hugo.yaml — edit there, not here.
+*/ -}}
+{{- with site.Menus.footer }}
+<nav class="hx:mx-auto hx:flex hx:flex-wrap hx:justify-center hx:gap-x-6 hx:gap-y-2 hx:px-6 hx:pt-8 hx:pb-2 hx:text-sm hx:text-gray-600 hx:dark:text-gray-400">
+  {{- range . }}
+    {{- $external := hasPrefix .URL "http" -}}
+    <a class="hx:hover:text-gray-900 hx:dark:hover:text-gray-100" href="{{ .URL }}"{{ if $external }} target="_blank" rel="noreferrer"{{ end }}>{{ .Name }}</a>
+  {{- end }}
+</nav>
+{{- end }}
