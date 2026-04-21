@@ -58,42 +58,41 @@ menu:
       name: Study Guides
       pageRef: /study-guides
       weight: 2
+    - identifier: notes
+      name: Notes
+      url: https://kraker.github.io/notes/
+      weight: 3
+    - identifier: projects
+      name: Projects
+      pageRef: /projects
+      weight: 4
     - identifier: about
       name: About
       pageRef: /about
-      weight: 3
+      weight: 5
+    - identifier: faq
+      name: FAQ
+      pageRef: /faq
+      weight: 6
     - name: Search
-      weight: 4
+      weight: 7
       params:
         type: search
     - name: RSS
-      weight: 5
+      weight: 8
       url: /blog/index.xml
       params:
         icon: rss
     - name: GitHub
-      weight: 6
+      weight: 9
       url: https://github.com/kraker
       params:
         icon: github
     - name: LinkedIn
-      weight: 7
+      weight: 10
       url: https://www.linkedin.com/in/alexkraker/
       params:
         icon: linkedin
-  footer:
-    - identifier: notes
-      name: Notes
-      url: https://kraker.github.io/notes/
-      weight: 1
-    - identifier: faq
-      name: FAQ
-      pageRef: /faq
-      weight: 2
-    - identifier: projects
-      name: Projects
-      pageRef: /projects
-      weight: 3
 
 params:
   description: >
