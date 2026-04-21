@@ -1,6 +1,5 @@
 ---
 title: About
-draft: true
 ---
 
 Linux security engineer and Red Hat ecosystem practitioner based in

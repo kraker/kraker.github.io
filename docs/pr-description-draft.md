@@ -1,87 +1,111 @@
 ---
-title: "Draft PR description: Migrate to Hextra theme"
+title: "PR description: Migrate to Hextra theme + redesign non-blog content"
 date: 2026-04-20
 ---
 
-This is a local-only artifact. When ready to push, use the body below as the PR description.
+Local-only working copy. The body below is used as the PR description when opening the draft PR.
 
 ---
 
 ## Summary
 
-Migrate `kraker.github.io` from the risotto theme to **Hextra v0.12.2**, installed as a Hugo module. Dark mode is the default, blog is the primary content type, and all pre-migration URLs are preserved.
+Migrates `kraker.github.io` from the risotto theme to **Hextra v0.12.2** (installed as a Hugo module). Redesigns the homepage, About, Projects, FAQ, and Contact pages against the personal brand spec (`docs/branding/alexkraker_brand_spec_v1.md`). Adds a new `/study-guides/` landing page. Preserves every existing blog post URL unchanged.
 
-Positioning shift toward Red Hat Consulting + *The RHCSA Field Manual*. Homepage and About copy are first-pass drafts — iterate before merge.
+Opened as **draft** — the author plans to rewrite portions of the Claude-drafted copy in their own voice before merging.
 
-## What changed
+## What's in this PR
 
-- **Theme**: risotto submodule → Hextra Hugo module (`github.com/imfing/hextra` at v0.12.2). `.gitmodules` and `themes/risotto` removed.
-- **Hugo**: CI version bumped `0.142.0 → 0.160.1` extended (well past Hextra's `≥0.146.0` floor).
-- **Workflow**: added `actions/setup-go@v5` (Hugo modules run on Go's module system), added a `hugo mod get` step, dropped `submodules: recursive`, dropped the Dart Sass / Node.js no-ops.
-- **`hugo.yaml`** rewritten against Hextra's reference config: module import, `params.theme.default=dark` + toggle, `params.page.width=wide`, FlexSearch on `content`, OG/Twitter defaults, image pipeline + cache preserved.
-- **Layout overrides**: two small files.
-  - `layouts/_partials/custom/head-end.html` — 3 lines. Adds `<link rel=alternate>` RSS feed discovery (Hextra doesn't emit this by default). Uses Hextra's documented `custom/head-end.html` extension hook, not a template override.
-  - `layouts/_shortcodes/recent-posts.html` — 12 lines. Renders the N most recent blog posts as a small-caps "Latest posts" list on the homepage. Needed because Hextra ships no recent-posts equivalent and we don't want the homepage to be just a hero with nothing under it.
-  - Everything else is Hextra stock. No 404 override, no custom footer partial, no other shortcodes.
-- **Content**:
-  - `content/_index.md` — **clean-slate homepage draft** (after six iterations cycling through Claude's voice). Frontmatter `draft: true`. Shape: Hextra `hextra-home` layout + three hero shortcodes (`hero-headline`, `hero-subtitle`, one `hero-button` → /blog) + a `{{< recent-posts limit="5" >}}` shortcode rendering the five most recent blog posts with dates. No feature-grids, no cards, no secondary CTAs. LinkedIn / email reach via the top-nav icons. **⚠ Flip `draft: false` before merging** or `/` 404s on the live site.
-  - `content/about/index.md` — **clean-slate About draft**. Frontmatter `draft: true`. Two prose paragraphs (identity + day-to-day work; what I publish with one-sentence Field Manual mention) + `## Work with me` block (employment-forward, LinkedIn + email, no partner-channel mention). Same identity line as homepage subtitle — reader sees one person across surfaces. **⚠ Flip `draft: false` before merging** or `/about/` 404s on the live site.
-  - `content/projects/_index.md` — **clean-slate Projects draft**. Frontmatter `draft: true`. Four-category list: Shipping (RHCSA + RHCE study guides), In progress (Field Manual), Community (Linux Upskill Challenge, ProLUG), Past (PaperStreet). Uses Hextra default layout so `##` headings render with prose chrome.
-  - `content/faq.md` — pruned the personal Q&A trailing section (favorite color / movie / TV); kept all technical Q&A verbatim. Per brand spec §9 "not a personal-life surface."
-  - `content/blog/_index.md` — `type: blog` + `cascade.type: blog`, so Hextra's blog layouts are used.
-  - `content/resume/index.md`, `content/contact/index.md` — unchanged. Resume stays reachable at `/resume/` but is out of the top nav. Contact stays orphan at `/contact/`.
-- **Assets**:
-  - `static/favicon.svg` + `favicon-dark.svg` — monospace "ak" monogram, OS-color-scheme-aware.
-  - `static/favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `favicon.ico` — generated from the SVG via ImageMagick.
-  - `static/site.webmanifest` — minimal PWA manifest so Hextra's head request doesn't 404.
-- **Housekeeping**:
-  - `.gitignore` gains `image-backups/` (output of `scripts/optimize-images.sh`) and `.claude/` (local Claude Code settings).
-  - `docs/migration-inventory.md` — the Phase 0 artifact; use it to spot-check URL preservation in review.
+### Theme + infrastructure
 
-## URL-level diff vs. live
+- **Hextra module**: `github.com/imfing/hextra` at v0.12.2. Replaces the risotto git submodule. `.gitmodules` and `themes/risotto/` removed; `go.mod` + `go.sum` added.
+- **Hugo version**: CI pinned `0.142.0 → 0.160.1` extended (past Hextra's 0.146.0 floor).
+- **Workflow**: `actions/setup-go@v5` added (Hugo modules run on Go's module system). New `hugo mod get` step. `submodules: recursive` and the Dart Sass / Node no-ops dropped.
+- **`hugo.yaml`**: rewritten against Hextra's reference config. Dark mode default + toggle, wide page width, FlexSearch, image pipeline and cache preserved from risotto.
+- **`i18n/en.yaml`**: copyright override ("Copyright © 2026 Alex Kraker"). Hextra's footer reads this via `T "copyright"`, not the `hugo.yaml` top-level `copyright:` field.
 
-Expected delta after draft flags are flipped: **zero**. Inventory cross-check against the live slugs is in `docs/migration-inventory.md` — every pre-migration URL still renders in the new build (**provided `draft: true` on `/` and `/about/` is flipped to `false` first** — otherwise those two URLs 404 in production):
+### Content
 
-- `/about/`, `/blog/`, `/faq/`, `/projects/`, `/resume/`
-- `/blog/grit/`, `/blog/kvdo/`, `/blog/learn-ansible/`, `/blog/learn-devops/`, `/blog/learn-python-qr/`, `/blog/linux-sysadmin/`, `/blog/rhel-vagrant/`, `/blog/second-brain/`, `/blog/technical-learning/`
-- `/index.xml`, `/blog/index.xml`, per-tag and per-category RSS
-- `/notes/` is untouched — it's a separate GitHub Pages project site (`kraker/notes`), only surfaced here as an absolute URL in the top-nav menu.
+- **`content/_index.md` (homepage)**: Hextra `hextra-home` layout. Hero badge → `/study-guides`, headline "Alex Kraker", subtitle "Linux security engineer. Red Hat ecosystem practitioner.", one "Read the blog" CTA, feature-grid of two cards (RHCSA study guide, Work with me).
+- **`content/about/index.md`**: two-paragraph bio + "Work with me" block + trailing "Also: Projects · Notes · FAQ" row linking secondary pages.
+- **`content/projects/_index.md`**: four-category list (Shipping, In progress, Community, Past).
+- **`content/study-guides.md`** (new): brief landing page for the RHCSA + RHCE open-source study guides.
+- **`content/contact/index.md`**: reach-out methods (email, LinkedIn, GitHub) + "What lands" / "What I won't reply to" blocks. Public email is `contact@alexkraker.com` (PurelyMail alias; user-side creation required).
+- **`content/faq.md`**: personal Q&A trailing section (favorite color / movie / TV) pruned; technical Q&A kept verbatim.
+- **`content/resume/index.md`**: unchanged.
+- **`content/blog/*`**: unchanged. Every URL in `docs/migration-inventory.md` still renders identically. `content/blog/_index.md` adds `type: blog` + `cascade: { type: blog, comments: true }` so Hextra's blog layouts apply and Giscus only enables on blog posts.
 
-Draft post `/blog/second-brain-in-vim/` is still excluded (`draft: true`).
+### Nav
 
-The legacy stale slugs `/blog/devops-learning-resources/` and `/blog/faq/` that showed up in prior `public/` outputs were risotto cruft — they aren't regenerated by the clean build.
+Top nav (trimmed from original 11 items to 8):
+- **Blog · Study Guides · About · Contact** + icons: Search · RSS · GitHub · LinkedIn
 
-## What's staged but not live yet
+Dropped from nav, still reachable by direct URL (linked from About body):
+- Notes (external), Projects, FAQ, Resume
 
-Items wired up with placeholders that need your input to go live:
+### Integrations
 
-- **Giscus comments** — `params.comments.enable: false` in `hugo.yaml` + empty `repoId` / `categoryId`. Register at [giscus.app](https://giscus.app/), paste the four values, flip `enable` to `true`. Cascade can be added later to restrict comments to blog posts only.
-- **GoatCounter analytics** — the `params.analytics.goatCounter` block is commented out (Hextra errors on an empty `code`). When the `kraker.goatcounter.com` account is live, uncomment it with the code.
-- **Newsletter / Buttondown** — footer "Subscribe" is an `href="#"` placeholder per the plan's "out of scope for this PR" note.
+- **Giscus comments (live)**: blog posts only. Global `params.comments.enable: false`; blog posts inherit `comments: true` via cascade. Repo + IDs populated in `hugo.yaml` after giscus.app registration.
+- **RSS feeds**: `/index.xml`, `/blog/index.xml`, per-section and per-tag feeds auto-generated. `layouts/_partials/custom/head-end.html` adds `<link rel=alternate>` discovery on every page.
+- **GoatCounter analytics**: config block documented in `hugo.yaml`, commented out until the account is live.
+- **Newsletter (Buttondown)**: deferred.
+
+### Custom code surface
+
+Four items beyond Hextra stock:
+
+| Path | Purpose |
+|---|---|
+| `layouts/_partials/custom/head-end.html` | 3 lines — RSS feed discovery links |
+| `assets/css/custom.css` | 1 rule — drop the forced `<main>` min-height so the footer can rise to meet short pages (notably the homepage) |
+| `i18n/en.yaml` | 1 key — copyright override |
+| `static/favicon*` + `site.webmanifest` | Favicon set, generated once from SVG via ImageMagick |
+
+Everything else (layouts, partials, shortcodes, menu rendering, search, comments, footer, dark/light toggle) is Hextra default.
+
+## URL-level diff vs. current live site
+
+**Expected delta: one new URL**, no existing URLs broken.
+
+- New: `/study-guides/`
+- Unchanged: `/`, `/about/`, `/blog/`, `/blog/*` (every post), `/projects/`, `/resume/`, `/faq/`, `/contact/`, `/index.xml`, `/blog/index.xml`, `/notes/` (external redirect preserved)
+- Draft (excluded from build): `/blog/second-brain-in-vim/` — pre-migration draft post, left as it was
+
+`docs/migration-inventory.md` has the pre-migration URL inventory to spot-check against.
+
+## What's iterating after this PR opens
+
+The author (Alex) plans to rewrite the Claude-drafted copy on these surfaces in their own voice:
+
+- Homepage hero + feature-card subtitles
+- About bio paragraphs
+- Projects descriptions
+- Contact page "What lands" / "What I won't reply to" framing
+
+The structure is settled; the language isn't.
 
 ## Test plan
 
-Things only a browser can confirm — please check these after the deploy preview comes up (or `hugo server` locally):
+Verified non-browser (see session history for command output):
 
-- [ ] First-load theme is dark (incognito)
-- [ ] Theme toggle cycles light / dark / system
-- [ ] Mobile (375px): hamburger works, no horizontal scroll, hero readable
-- [ ] Search box (top nav) returns hits from real posts; keyboard shortcut works
-- [ ] `/404.html` renders with links back to Home / Blog / About
-- [ ] `/notes/` still resolves to the separate notes site
-- [ ] RSS feeds open in a browser and in a feed reader
-- [ ] Code blocks (bash / yaml in `/blog/kvdo/`, `/blog/learn-ansible/`) look legible in both light and dark
+- [x] `hugo --gc --minify` builds clean (48+ pages, zero errors/warnings)
+- [x] All blog post URLs + RSS feeds render identically to pre-migration
+- [x] Internal link check passes
+- [x] Giscus renders only on blog posts; excluded from `/`, `/about/`, `/projects/`, `/contact/`, etc.
+- [x] No references to `Merrick` (consulting partner) or the old `alex@alexkraker.com` in public pages — `grep` clean
 
-Verified non-browser:
+To verify in the deploy preview / local browser:
 
-- `hugo --gc --minify` builds clean (46 pages, zero warnings)
-- `hugo server` responds 200 on `/`, `/blog/`, `/blog/grit/`, `/about/`, 404 on a nonexistent URL
-- All RSS feeds are valid XML; 9 items in `/index.xml` and `/blog/index.xml`
-- Internal link check: 25 unique links across 20 HTML files, **all resolve**
-- Homepage HTML: 39.6KB (plan ceiling: 200KB transferred)
-- Hextra `chroma` classes emit on code blocks
+- [ ] Dark mode default on first load (incognito)
+- [ ] Theme toggle cycles light / dark / system; Giscus iframe follows
+- [ ] Mobile (375px): hamburger works, no horizontal scroll
+- [ ] Search box returns hits from real posts; Ctrl+K opens it
+- [ ] Comment widget loads on a blog post (sign-in button visible); does not appear on other pages
+- [ ] `/404.html` renders Hextra's default 404
+- [ ] Contact page `contact@alexkraker.com` mailto works (after PurelyMail alias is created)
 
 ## Rollback
+
+Branch starts from tag `pre-hextra-backup` pointing at `main@11c5c64`.
 
 ```
 git checkout main
@@ -89,22 +113,20 @@ git reset --hard pre-hextra-backup
 git push --force-with-lease origin main
 ```
 
-Tag is local-only right now; push it before the force-push if you want the safety net on origin:
+Local-only until pushed. If you want the safety net on `origin` before any `--force-with-lease` scenario, push the tag alongside the branch:
 
 ```
 git push origin pre-hextra-backup
 ```
 
-## Out of scope (follow-ups)
+## Out of scope (follow-ups — tracked here so they don't get lost)
 
-- Iterating on homepage + About copy (decision 2 deferred to a later pass per your call)
-- Newsletter setup (Buttondown)
-- Enabling GoatCounter (needs account)
-- Tags on existing posts (you opted to leave untouched this round)
-- Field Manual `/rhcsa/` web companion, per-post OG image generation, `llms.txt`
-- Create social accounts: **Substack**, **Mastodon**, **Bluesky**. Once accounts exist, surface each from `/contact/` and (if desired) as icons in the top-nav icon row — Hextra ships a `mastodon` icon in its built-in set; Substack and Bluesky would need SVGs added via `assets/` or inline in a custom partial.
-- Contact form / spam-resistant reach mechanism (see current session discussion — mailto on `/contact/` is attracting spam).
-
-### Done in-flight (was here earlier)
-
-- ~~Enabling Giscus~~ — live on blog posts only, wired via `cascade.comments: true` on `content/blog/_index.md` + `params.comments.giscus` populated in `hugo.yaml`.
+- Flip `content/blog/second-brain-in-vim.md` from draft to published when the post is ready — or delete if it's abandoned
+- PurelyMail: create the `contact@alexkraker.com` alias forwarding to the primary inbox
+- Enable GoatCounter analytics (register the `kraker` subdomain, uncomment the config block)
+- Buttondown (or alternative) newsletter setup
+- Tag existing blog posts (every post's `tags:` frontmatter is empty or absent)
+- Field Manual web companion at `/rhcsa/`, per-post OG image generation, `llms.txt`
+- Create social accounts: **Substack**, **Mastodon**, **Bluesky**. Once accounts exist, surface from `/contact/` and (if desired) as icons in the top-nav icon row. Hextra ships a `mastodon` icon in its built-in set; Substack and Bluesky would need SVGs added via `assets/` or inline in a custom partial.
+- Contact form / serverless form handler if the `contact@` alias proves insufficient against spam over time (current expectation: PurelyMail spam filter is enough)
+- Brand color customization (`--primary-hue` tuning per brand spec §5; currently on Hextra defaults per Option C "defer")

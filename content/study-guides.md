@@ -1,6 +1,5 @@
 ---
 title: Red Hat Study Guides
-draft: true
 ---
 
 Open-source study guides for the Red Hat certification exams. Written

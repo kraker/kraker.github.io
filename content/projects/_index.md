@@ -1,6 +1,5 @@
 ---
 title: Projects
-draft: true
 ---
 
 ## Shipping
