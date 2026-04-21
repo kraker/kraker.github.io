@@ -21,7 +21,11 @@ cascade:
 
 <div class="hx:mb-12">
 {{< hextra/hero-subtitle >}}
+<!--
   Linux security engineer.&nbsp;<br class="hx:sm:block hx:hidden" />Red Hat ecosystem practitioner.
+-->
+Linux security engineer. Maintainer of the open-source RHCSA and RHCE study guides.\
+Currently writing the "RHCSA Field Manual", stay tuned!
 {{< /hextra/hero-subtitle >}}
 </div>
 

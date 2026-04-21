@@ -2,16 +2,18 @@
 title: About
 ---
 
-Linux security engineer and Red Hat ecosystem practitioner based in
-Tulsa, OK. Day-to-day the work is federal contracting — RHEL and AAP,
-STIG hardening, DISA compliance baselines, Ansible patterns, and the
+Linux security engineer. Maintainer of the open-source
+[RHCSA](https://kraker.github.io/rhcsa/) and
+[RHCE](https://kraker.github.io/rhce/) study guides. Based in
+Tulsa, OK.
+
+Day-to-day the work is federal contracting — RHEL and AAP, STIG
+hardening, DISA compliance baselines, Ansible patterns, and the
 SELinux policies other people avoid.
 
-Mostly I publish what I build. Open-source study guides for the Red
-Hat certification exams — [RHCSA](https://kraker.github.io/rhcsa/)
-(which started as my own study notes and grew into something
-[ProLUG](https://prolug.org) and others recommend directly) and
-[RHCE](https://kraker.github.io/rhce/). I help edit chapters for the
+The RHCSA study guide started as my own study notes and grew into
+something [ProLUG](https://prolug.org) and others recommend directly.
+Alongside the guides I help edit chapters for the
 [Linux Upskill Challenge](https://linuxupskillchallenge.org/), and
 open-source day-to-day work when it isn't client-specific. A longer
 [RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual) is
