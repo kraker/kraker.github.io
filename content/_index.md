@@ -43,7 +43,3 @@ cascade:
     link="/about"
   >}}
 {{< /hextra/feature-grid >}}
-
-## Recent posts
-
-{{< recent-posts limit="3" >}}
