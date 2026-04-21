@@ -26,8 +26,8 @@ roles in regulated Linux environments (federal, fintech, healthcare).
 
 Reach me via
 [LinkedIn](https://www.linkedin.com/in/alexkraker/) or
-[email](mailto:alex@alexkraker.com). I respond to everything that
-isn't obvious spam.
+[email](mailto:contact@alexkraker.com). I respond to everything
+that isn't obvious spam.
 
 ---
 

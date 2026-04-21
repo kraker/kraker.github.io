@@ -2,7 +2,7 @@
 title: Contact
 ---
 
-- **Email:** [alex@alexkraker.com](mailto:alex@alexkraker.com)
+- **Email:** [contact@alexkraker.com](mailto:contact@alexkraker.com)
 - **LinkedIn:** [linkedin.com/in/alexkraker](https://www.linkedin.com/in/alexkraker/)
 - **GitHub:** [github.com/kraker](https://github.com/kraker)
 
