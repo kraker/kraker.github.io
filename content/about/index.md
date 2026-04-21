@@ -3,23 +3,20 @@ title: About
 draft: true
 ---
 
-I'm a Linux security engineer and Red Hat ecosystem practitioner based
-in Tulsa, OK. Day-to-day the work is federal contracting — RHEL and
-AAP, STIG hardening, DISA compliance baselines, Ansible patterns, and
-the SELinux policies other people avoid. The work sits at the
-intersection of Linux, security, and automation, which is where I
-focus.
+Linux security engineer and Red Hat ecosystem practitioner based in
+Tulsa, OK. Day-to-day the work is federal contracting — RHEL and AAP,
+STIG hardening, DISA compliance baselines, Ansible patterns, and the
+SELinux policies other people avoid.
 
-Mostly I publish what I build. I maintain open-source study guides for
-the Red Hat certification exams —
-[RHCSA](https://kraker.github.io/rhcsa/) (which started as my own
-study notes and grew into something [ProLUG](https://prolug.org) and
-others recommend directly) and
-[RHCE](https://kraker.github.io/rhce/). Alongside those I
-open-source day-to-day work when it isn't client-specific, help edit
-chapters for the
+Mostly I publish what I build. Open-source study guides for the Red
+Hat certification exams — [RHCSA](https://kraker.github.io/rhcsa/)
+(which started as my own study notes and grew into something
+[ProLUG](https://prolug.org) and others recommend directly) and
+[RHCE](https://kraker.github.io/rhce/). I help edit chapters for the
 [Linux Upskill Challenge](https://linuxupskillchallenge.org/), and
-keep a longer-form RHCSA Field Manual in draft — more to come.
+open-source day-to-day work when it isn't client-specific. A longer
+[RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual) is
+in draft — more to come.
 
 ## Work with me
 
@@ -31,9 +28,3 @@ Reach me via
 [LinkedIn](https://www.linkedin.com/in/alexkraker/) or
 [email](mailto:alex@alexkraker.com). I respond to everything that
 isn't obvious spam.
-
-## Reach out
-
-[alex@alexkraker.com](mailto:alex@alexkraker.com) ·
-[GitHub](https://github.com/kraker) ·
-[LinkedIn](https://www.linkedin.com/in/alexkraker/)

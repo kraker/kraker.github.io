@@ -70,15 +70,3 @@ Also, proficiency in the Linux CLI is a pre-requisite to becoming a Linux Sysadm
 Beyond those two things, the most straightforward path to becoming a Linux Sysadmin is to work somewhere where you get to work on Linux systems. 
 Linux was a hobby, and I ran Linux on my laptops and had a web-server on 
 Linode for many years. But it wasn't until I got a job in tech support at a web-hosting company to where I really started my wizarding apprenticeship.
-
-## What is your favorite color?
-
-Blue, no green...aaah!
-
-## Favorite movie?
-
-The Matrix or Monty Python's The Holy Grail.
-
-## Favorite TV series?
-
-Firefly.

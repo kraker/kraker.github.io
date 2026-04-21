@@ -134,13 +134,9 @@ params:
       index: content
       tokenize: forward
 
-  # Open Graph / Twitter defaults (Hextra reads these via internal head templates)
-  images:
-    - head-shot-3.jpg
-
   # Comments — Giscus. Kept disabled until repoId/categoryId are added from giscus.app.
   comments:
-    enable: false
+    enable: true
     type: giscus
     giscus:
       repo: kraker/kraker.github.io

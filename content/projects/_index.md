@@ -1,22 +1,28 @@
 ---
 title: Projects
-description: Projects I maintain or contribute to.
-author: Alex Kraker
+draft: true
 ---
 
-## Writing
+## Shipping
 
-- **[The RHCSA Field Manual](https://github.com/kraker/rhcsa-field-manual)** —
-  Work-in-progress opinionated study guide for the Red Hat Certified
-  System Administrator exam. Owner.
-- **[kraker/rhcsa](https://github.com/kraker/rhcsa)** —
-  Upstream open-source community resource for RHCSA study material; the
-  Field Manual draws from this repo. Owner.
+- [**RHCSA study guide**](https://kraker.github.io/rhcsa/) —
+  open-source. Used widely enough to earn
+  [ProLUG](https://prolug.org)'s standing recommend.
+- [**RHCE study guide**](https://kraker.github.io/rhce/) —
+  open-source.
 
-## Past / adjacent
+## In progress
 
-- **[Linux Upskill Challenge](https://linuxupskillchallenge.org/)** —
-  Editor / contributor. A month-long, self-paced intro to Linux
-  sysadmin practice.
-- **[PaperStreet](https://github.com/paperstreetco/)** —
-  Owner / co-founder.
+- [**RHCSA Field Manual**](https://github.com/kraker/rhcsa-field-manual) —
+  longer-form reference drawn from the study guides.
+
+## Community
+
+- [**Linux Upskill Challenge**](https://linuxupskillchallenge.org/) —
+  editor / contributor.
+- [**ProLUG**](https://prolug.org) — member.
+
+## Past
+
+- [**PaperStreet**](https://github.com/paperstreetco/) —
+  owner / co-founder.
