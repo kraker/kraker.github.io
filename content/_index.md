@@ -7,7 +7,7 @@ cascade:
     hide: true
 ---
 
-{{< hextra/hero-badge link="/projects" >}}
+{{< hextra/hero-badge link="/study-guides" >}}
   <div class="hx:w-2 hx:h-2 hx:rounded-full hx:bg-primary-400"></div>
   <span>Open-source study guides for RHCSA + RHCE</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
@@ -34,22 +34,16 @@ cascade:
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
     title="RHCSA study guide"
-    subtitle="Open-source guide for the EX200 exam. Used widely enough to earn [ProLUG](https://prolug.org)'s standing recommend."
+    subtitle="Open-source guide for the EX200 exam. Widely used — ProLUG's standing recommend."
     link="https://kraker.github.io/rhcsa/"
   >}}
   {{< hextra/feature-card
-    title="RHCE study guide"
-    subtitle="Open-source guide for the EX294 exam — Ansible automation on RHEL."
-    link="https://kraker.github.io/rhce/"
-  >}}
-  {{< hextra/feature-card
-    title="Blog"
-    subtitle="Working notes on RHEL, Ansible, SELinux, STIG hardening, automation failures."
-    link="/blog"
-  >}}
-  {{< hextra/feature-card
-    title="About"
-    subtitle="Who I am, what I work on, how to reach me."
+    title="Work with me"
+    subtitle="Open to senior / principal Linux security + automation roles. LinkedIn or email."
     link="/about"
   >}}
 {{< /hextra/feature-grid >}}
+
+## Recent posts
+
+{{< recent-posts limit="3" >}}
