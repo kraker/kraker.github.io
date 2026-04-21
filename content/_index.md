@@ -1,7 +1,7 @@
 ---
 title: Alex Kraker
 layout: hextra-home
-draft: true
+draft: false
 cascade:
   sidebar:
     hide: true
@@ -9,7 +9,7 @@ cascade:
 
 {{< hextra/hero-badge link="/study-guides" >}}
   <div class="hx:w-2 hx:h-2 hx:rounded-full hx:bg-primary-400"></div>
-  <span>Open-source study guides for RHCSA + RHCE</span>
+  <span>RHCSA & RHCE Study Guides</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 
