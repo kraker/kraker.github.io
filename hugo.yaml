@@ -136,9 +136,24 @@ params:
       index: content
       tokenize: forward
 
-  # Comments — Giscus. Kept disabled until repoId/categoryId are added from giscus.app.
+  # Comments — Giscus (blog posts only).
+  #
+  # Globally disabled. Enabled per-page via `cascade.comments: true` in
+  # content/blog/_index.md — every descendant of /blog/ gets comments;
+  # nothing else does.
+  #
+  # To activate:
+  # 1. Repo settings → Features → enable Discussions.
+  # 2. Install the Giscus GitHub App (https://github.com/apps/giscus)
+  #    on this repo.
+  # 3. Visit https://giscus.app/, configure against kraker/kraker.github.io,
+  #    page mapping: pathname, pick/create a Discussion category
+  #    (e.g. "Blog comments" with "Announcements" type).
+  # 4. Copy data-repo-id, data-category, data-category-id from the
+  #    generated <script> tag into the four fields below.
+  # 5. Flip comments.enable to true.
   comments:
-    enable: true
+    enable: false
     type: giscus
     giscus:
       repo: kraker/kraker.github.io
