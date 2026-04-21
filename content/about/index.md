@@ -28,3 +28,9 @@ Reach me via
 [LinkedIn](https://www.linkedin.com/in/alexkraker/) or
 [email](mailto:alex@alexkraker.com). I respond to everything that
 isn't obvious spam.
+
+---
+
+Also: [Projects](/projects/) ·
+[Notes](https://kraker.github.io/notes/) ·
+[FAQ](/faq/)
