@@ -12,7 +12,6 @@ Personal site at [kraker.github.io](https://kraker.github.io), built with [Hugo]
 - `hugo --gc --minify` — production build into `public/` (matches the CI build)
 - `hugo new content/blog/<slug>.md` — scaffold a new post using `archetypes/default.md` (TOML front matter; starts with `draft = true`)
 - `hugo mod get -u` — refresh the Hextra module to its latest available version
-- `./scripts/optimize-images.sh` — resize/strip JPEG/PNG in `content/`, backing up originals to `image-backups/` (requires ImageMagick's `magick`)
 
 CI installs **Hugo 0.160.1 extended** (see `.github/workflows/hugo.yaml`); `hugo.yaml` sets `min: "0.146.0"`. Match locally to avoid build drift.
 
@@ -29,7 +28,7 @@ The theme is a Hugo Module, not a submodule — a plain `git clone` is sufficien
 
 ## Image handling
 
-`hugo.yaml` configures the imaging pipeline (quality 82, Lanczos, strips GPS EXIF). The `optimize-images.sh` script is a separate, destructive pre-processing step that rewrites source files in `content/` in place — always keep `image-backups/` around until you've confirmed results.
+`hugo.yaml` configures the imaging pipeline (quality 82, Lanczos, strips GPS EXIF). For one-off source-file optimization before committing (large uploads, etc.), run `magick` directly — e.g., `magick in.jpg -resize 400x400 -strip -quality 85 out.jpg`. Copy the original to `image-backups/<path>/` first so it's recoverable if the resize result isn't right.
 
 ## Deferred work
 

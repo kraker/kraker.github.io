@@ -62,10 +62,10 @@ menu:
       name: Blog
       pageRef: /blog
       weight: 3
-    - identifier: uses
-      name: Uses
-      pageRef: /uses
-      weight: 4
+    # - identifier: uses
+    #   name: Uses
+    #   pageRef: /uses
+    #   weight: 4
     # - identifier: contact
     #   name: Contact
     #   pageRef: /contact
