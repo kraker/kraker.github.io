@@ -50,22 +50,26 @@ markup:
 
 menu:
   main:
-    - identifier: blog
-      name: Blog
-      pageRef: /blog
-      weight: 1
-    - identifier: study-guides
-      name: Study Guides
-      pageRef: /study-guides
-      weight: 2
     - identifier: about
       name: About
       pageRef: /about
+      weight: 1
+    - identifier: projects
+      name: Projects
+      pageRef: /projects
+      weight: 2
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
       weight: 3
-    - identifier: contact
-      name: Contact
-      pageRef: /contact
+    - identifier: uses
+      name: Uses
+      pageRef: /uses
       weight: 4
+    # - identifier: contact
+    #   name: Contact
+    #   pageRef: /contact
+    #   weight: 4.5
     - name: Search
       weight: 5
       params:
@@ -85,6 +89,11 @@ menu:
       url: https://www.linkedin.com/in/alexkraker/
       params:
         icon: linkedin
+    - name: Email
+      weight: 9
+      url: mailto:contact@alexkraker.com
+      params:
+        icon: mail
 
 params:
   description: >
@@ -99,7 +108,7 @@ params:
     width: wide
 
   page:
-    width: wide
+    width: full
     displayPagination: false
 
   blog:
