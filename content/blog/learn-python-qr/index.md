@@ -4,6 +4,10 @@ date: 2025-12-28
 draft: false
 ---
 
+![](brecht-corbeel-qHx3w6Gwz9k-unsplash_medium.jpg)
+
+Photo by [Brecht Corbeel](https://unsplash.com/@brechtcorbeel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-neon-circle-with-a-snake-on-it-qHx3w6Gwz9k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 This is my fairly opinionated quick reference on how to learn Python. This isn't
 so much a guide as it is something to launch from. There are already plenty of guides. I'm writing this with the
 novice in mind, but the seasoned programming veteran may derive something

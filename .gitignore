@@ -1,3 +1,12 @@
-# .gitignore
-
+# Hugo
 public/
+.hugo_build.lock
+
+# Image optimization backups (manual, via magick)
+image-backups/
+
+# Local Claude Code settings
+.claude/
+
+# Private brand docs — source of truth lives in GDrive
+docs/branding/

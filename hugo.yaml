@@ -1,80 +1,183 @@
 ---
-# huguo.yaml
+# hugo.yaml — Hextra
 
 baseURL: https://kraker.github.io/
 title: Alex Kraker
 author: Alex Kraker
-copyright: "Copyright © 2025 Alex Kraker" 
+copyright: "Copyright © 2026 Alex Kraker"
 languageCode: en-us
-theme: risotto
 
-sectionPagesMenu: main
+enableGitInfo: true
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+# Blog-primary site: suppress the docs-style sidebar globally. Applied via
+# cascade in content/_index.md so Hextra's blog layout (which manages its own
+# sidebar placeholder) isn't second-guessed by a site-level cascade.
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
+  imports:
+    - path: github.com/imfing/hextra
+
+# Homepage + section output formats (RSS for sections preserves /index.xml and /blog/index.xml)
+outputs:
+  home: [html, rss, llms]
+  page: [html, markdown]
+  section: [html, rss, markdown]
+
 pagination:
-  pagerSize: 3
-
-params:
-  noindex: false
-  theme:
-    pallette: base16-dark
-  about:
-    title: About
-    description: >
-      Alex Kraker is a Linux security engineer, coffee lover, adoring pet owner,
-      musician and autodidact.
-  socialLinks:
-    - icon: fa-brands fa-github
-      title: GitHub
-      url: https://github.com/kraker
-    - icon: fa-brands fa-linkedin
-      title: LinkedIn
-      url: https://www.linkedin.com/in/alexkraker/
-    - icon: fa-solid fa-envelope
-      title: Email
-      url: mailto:alex@alexkraker.com
-
-menu:
-  main:
-    - name: home
-      url: /
-      weight: 1
-    - name: about
-      url: /about/
-      weight: 2
-    - name: projects
-      url: /projects/
-      weight: 3
-    - name: blog
-      url: /blog/
-      weight: 4
-    - name: notes
-      url: https://kraker.github.io/notes/
-      weight: 5
-    # - name: contact
-    #   url: /contact/
-    #   weight: 6
+  pagerSize: 10
 
 markup:
+  highlight:
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
   tableOfContents:
     startLevel: 2
     endLevel: 3
     ordered: true
 
-# Image processing configuration
+menu:
+  main:
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 1
+    - identifier: projects
+      name: Projects
+      pageRef: /projects
+      weight: 2
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 3
+    # - identifier: uses
+    #   name: Uses
+    #   pageRef: /uses
+    #   weight: 4
+    # - identifier: contact
+    #   name: Contact
+    #   pageRef: /contact
+    #   weight: 4.5
+    - name: Search
+      weight: 5
+      params:
+        type: search
+    - name: RSS
+      weight: 6
+      url: /blog/index.xml
+      params:
+        icon: rss
+    - name: GitHub
+      weight: 7
+      url: https://github.com/kraker
+      params:
+        icon: github
+    - name: LinkedIn
+      weight: 8
+      url: https://www.linkedin.com/in/alexkraker/
+      params:
+        icon: linkedin
+    - name: Email
+      weight: 9
+      url: mailto:contact@alexkraker.com
+      params:
+        icon: mail
+
+params:
+  description: >
+    Alex Kraker is a Linux security engineer, coffee lover, adoring pet owner,
+    musician and autodidact.
+
+  externalLinkDecoration: true
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: wide
+
+  page:
+    width: full
+    displayPagination: false
+
+  blog:
+    list:
+      displayTags: true
+    article:
+      displayPagination: true
+
+  theme:
+    # Default landing theme is dark per migration plan. Toggle still available.
+    default: dark
+    displayToggle: true
+
+  footer:
+    width: wide
+    displayCopyright: true
+    displayPoweredBy: true
+
+  # displayUpdatedDate: true
+  # dateFormat: "January 2, 2006"
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+
+  # Comments — Giscus (blog posts only).
+  #
+  # Globally disabled. Enabled per-page via `cascade.comments: true` in
+  # content/blog/_index.md — every descendant of /blog/ gets comments;
+  # nothing else does.
+  #
+  # To activate:
+  # 1. Repo settings → Features → enable Discussions.
+  # 2. Install the Giscus GitHub App (https://github.com/apps/giscus)
+  #    on this repo.
+  # 3. Visit https://giscus.app/, configure against kraker/kraker.github.io,
+  #    page mapping: pathname, pick/create a Discussion category
+  #    (e.g. "Blog comments" with "Announcements" type).
+  # 4. Copy data-repo-id, data-category, data-category-id from the
+  #    generated <script> tag into the four fields below.
+  # 5. Flip comments.enable to true.
+  comments:
+    enable: false
+    type: giscus
+    giscus:
+      repo: kraker/kraker.github.io
+      repoId: ""
+      category: ""
+      categoryId: ""
+
+  # Analytics — GoatCounter. Block is omitted until the 'kraker' subdomain is
+  # registered at goatcounter.com; Hextra treats an empty `code` as an error.
+  # To enable, add:
+  #   analytics:
+  #     goatCounter:
+  #       code: "kraker"
+
+# Image processing — preserved from risotto config
 imaging:
-  # Default image processing quality
   quality: 82
-  # Resize filter for better quality
   resampleFilter: Lanczos
-  # Enable EXIF data stripping for privacy and smaller files
   exif:
     includeFields: ""
     excludeFields: "GPS.*"
     disableDate: false
     disableLatLong: true
-  # Anchor for cropping (smart, center, topleft, etc.)
   anchor: Smart
 
 caches:
