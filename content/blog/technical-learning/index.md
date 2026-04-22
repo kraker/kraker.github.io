@@ -133,7 +133,7 @@ I don't think it matters so much _how_ you do it though, I've seen a variety
 of methods used. But habitual note-taking seems to be a differentiator.
 
 I've already written extensively on how I manage
-[my personal knowledge base](https://kraker.github.io/blog/second-brain/) if
+[my personal knowledge base](/blog/second-brain/) if
 you're curious to learn more about how I do it.
 
 ### Quality primary sources

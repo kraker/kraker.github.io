@@ -1,6 +1,6 @@
-# kraker.github.io
+# alexkraker.com
 
-[kraker.github.io](https://kraker.github.io)
+[alexkraker.com](https://alexkraker.com)
 
 My minimalist personal site built in [Hugo](https://gohugo.io) using the
 [risotto](https://github.com/joeroe/risotto) theme and hosted on GitHub Pages.

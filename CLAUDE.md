@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Personal site at [kraker.github.io](https://kraker.github.io), built with [Hugo](https://gohugo.io) using the [Hextra](https://github.com/imfing/hextra) theme (pulled via Hugo Modules — see `go.mod`) and deployed to GitHub Pages via `.github/workflows/hugo.yaml` on every push to `main`.
+Personal site at [alexkraker.com](https://alexkraker.com) (repo name retained as `kraker.github.io`; GitHub Pages serves the custom domain via `static/CNAME`), built with [Hugo](https://gohugo.io) using the [Hextra](https://github.com/imfing/hextra) theme (pulled via Hugo Modules — see `go.mod`) and deployed to GitHub Pages via `.github/workflows/hugo.yaml` on every push to `main`.
 
 ## Commands
 

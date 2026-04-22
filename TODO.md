@@ -1,6 +1,6 @@
 # TODO
 
-Running list of deferred work for [kraker.github.io](https://kraker.github.io). Scope: anything bigger than a single-session fix that we've chosen to park for later. Conventions:
+Running list of deferred work for [alexkraker.com](https://alexkraker.com). Scope: anything bigger than a single-session fix that we've chosen to park for later. Conventions:
 
 - Group by topic (`## Heading`), not by date.
 - Each item has a short rationale so future-me (or Claude) knows why it's worth doing.
