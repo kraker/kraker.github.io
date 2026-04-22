@@ -5,6 +5,9 @@ draft: false
 
 ## Me in 10 Seconds
 
+<img src="head-shot-2.jpg" alt="Alex Kraker"
+     class="hx:float-right hx:ml-4 hx:mb-4 hx:w-32 hx:rounded-full" />
+
 * **Name:** Alex Kraker
 * **Age:** 41
 * **Occupation:** Linux & Cloud Security Engineer
