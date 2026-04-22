@@ -33,12 +33,27 @@ toc: false
 
 <div class="hx:mt-6"></div>
 
-## Explore
+## Featured Writing
 
 {{< cards >}}
-  {{< card link="about" title="About" icon="user" >}}
-  {{< card link="https://kraker.github.io/rhcsa/" title="RHCSA Study Guide" icon="book-open" >}}
-  {{< card link="https://kraker.github.io/rhce/" title="RHCE Study Guide" icon="book-open" >}}
+  {{< card
+    link="/blog/learn-python-qr/"
+    title="Learn Python Quickref"
+    subtitle="An opinionated quick reference on how to learn Python — not a guide so much as a place to launch from."
+    image="/blog/learn-python-qr/brecht-corbeel-qHx3w6Gwz9k-unsplash_medium.jpg"
+  >}}
+  {{< card
+    link="/blog/second-brain/"
+    title="My Personal Knowledge Base"
+    subtitle="Building a searchable second brain in Markdown — notes, research, and ideas I keep coming back to."
+    image="/blog/second-brain/jan-kahanek-g3O5ZtRk2E4-unsplash.jpg"
+  >}}
+  {{< card
+    link="/blog/learn-ansible/"
+    title="On Learning Ansible"
+    subtitle="Thoughts on learning Ansible — prerequisites, books, and where to practice."
+    image="/blog/learn-ansible/jonathan-chng-Ch8S4zHDQfE-unsplash.jpg"
+  >}}
 {{< /cards >}}
 
 <!--
