@@ -89,8 +89,13 @@ menu:
       url: https://www.linkedin.com/in/alexkraker/
       params:
         icon: linkedin
-    - name: Email
+    - name: Bluesky
       weight: 9
+      url: https://bsky.app/profile/alexkraker.bsky.social
+      params:
+        icon: bluesky
+    - name: Email
+      weight: 10
       url: mailto:contact@alexkraker.com
       params:
         icon: mail
