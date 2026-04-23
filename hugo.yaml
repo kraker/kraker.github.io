@@ -101,8 +101,13 @@ menu:
       url: https://bsky.app/profile/alexkraker.bsky.social
       params:
         icon: bluesky
-    - name: Email
+    - name: Substack
       weight: 10
+      url: https://substack.com/@alexkraker
+      params:
+        icon: substack
+    - name: Email
+      weight: 11
       url: mailto:contact@alexkraker.com
       params:
         icon: mail
