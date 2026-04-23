@@ -50,10 +50,17 @@ markup:
 
 menu:
   main:
+    - identifier: about-menu
+      name: About
+      weight: 1
     - identifier: about
       name: About
       pageRef: /about
-      weight: 1
+      parent: about-menu
+    - identifier: now
+      name: Now
+      pageRef: /now
+      parent: about-menu
     - identifier: projects
       name: Projects
       pageRef: /projects
@@ -113,7 +120,7 @@ params:
     width: wide
 
   page:
-    width: full
+    width: wide
     displayPagination: false
 
   blog:

@@ -95,12 +95,19 @@ VE, which is my preferred hypervisor that I run in my homelab.
 
 ## Productivity
 
+* Note-taking and personal knowledge-base: [Obsidian](https://obsidian.md/)
+* Email: [Purelymail](https://purelymail.com/)\
+  As many custom domains and inboxes as I want for around $10/yr is hard to
+  beat. Minimal, no-fuss email service provider.
+* Email client:
+  [Thunderbird](https://www.thunderbird.net/en-US/thunderbird/all/)
+
 <!-- Password manager, notes app, task manager, calendar, email
      client. -->
 
 ## Browser
 
-<!-- Browser + the handful of extensions that matter. -->
+I mainly use Firefox.
 
 ## Reading / Staying Current
 
