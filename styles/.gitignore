@@ -1,0 +1,4 @@
+# Ignore packages synced by `vale sync`. Custom files stay tracked.
+/*/
+!/Kraker/
+!/config/

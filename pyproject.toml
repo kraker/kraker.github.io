@@ -1,0 +1,23 @@
+[project]
+name = "kraker-github-io"
+version = "0.0.0"
+description = "Dev tooling (linters, pre-commit) for the alexkraker.com Hugo site."
+requires-python = ">=3.11"
+
+[dependency-groups]
+dev = [
+    "vale",
+    "pymarkdownlnt",
+    "prek",
+]
+
+[tool.uv]
+package = false
+
+[tool.pymarkdown]
+extensions.front-matter.enabled = true
+plugins.line-length.enabled = false
+plugins.no-inline-html.enabled = false
+plugins.first-line-heading.enabled = false
+plugins.no-bare-urls.enabled = false
+plugins.no-duplicate-heading.enabled = false

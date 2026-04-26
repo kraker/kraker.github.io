@@ -10,3 +10,9 @@ image-backups/
 
 # Private brand docs — source of truth lives in GDrive
 docs/branding/
+
+# uv / Python (uv.lock IS tracked — pin versions for reproducibility)
+.venv/
+__pycache__/
+*.pyc
+.python-version

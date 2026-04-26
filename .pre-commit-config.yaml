@@ -1,0 +1,20 @@
+# Hooks invoke uv-managed tools so the project owns its dependency versions.
+# Run locally: `uv run prek run --all-files` (or just `prek run --all-files` if installed globally).
+# Install hooks: `uv run prek install`
+repos:
+  - repo: local
+    hooks:
+      # Vale temporarily disabled — re-enable once existing prose backlog is cleaned.
+      # - id: vale
+      #   name: vale (prose lint)
+      #   entry: uv run vale
+      #   language: system
+      #   types: [markdown]
+      #   require_serial: false
+
+      - id: pymarkdown
+        name: pymarkdown (markdown lint)
+        entry: uv run pymarkdown scan
+        language: system
+        types: [markdown]
+        require_serial: false

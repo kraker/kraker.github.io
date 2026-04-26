@@ -1,0 +1,13 @@
+extends: existence
+message: "Marketing fluff: '%s' — say what you actually mean."
+level: warning
+ignorecase: true
+tokens:
+  - best-of-breed
+  - cutting-edge
+  - end-to-end
+  - from the ground up
+  - mission-critical
+  - next-gen
+  - turnkey
+  - world-class

@@ -1,0 +1,19 @@
+extends: substitution
+message: "Brand spelling: '%s' → '%s'"
+level: warning
+ignorecase: true
+action:
+  name: replace
+swap:
+  github: GitHub
+  gitlab: GitLab
+  hashicorp: HashiCorp
+  ansible: Ansible
+  hugo: Hugo
+  hextra: Hextra
+  bluesky: Bluesky
+  mastodon: Mastodon
+  substack: Substack
+  buttondown: Buttondown
+  giscus: Giscus
+  red hat: Red Hat
