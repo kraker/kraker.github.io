@@ -140,7 +140,7 @@ params:
     displayToggle: true
 
   footer:
-    width: wide
+    # width: wide
     displayCopyright: true
     displayPoweredBy: true
 

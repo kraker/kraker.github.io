@@ -7,6 +7,7 @@ cascade:
   authors:
     - Alex Kraker
   comments: true
+  width: normal
 ---
 
 <div style="text-align: center; margin-top: 1em;">
