@@ -17,4 +17,8 @@ repos:
         entry: uv run pymarkdown scan
         language: system
         types: [markdown]
+        # Hugo archetypes are templates, not prose. pymarkdown's
+        # front-matter extension misparses the `--- ... ---` block on
+        # archetype shapes and false-positives MD022.
+        exclude: ^archetypes/
         require_serial: false
