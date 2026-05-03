@@ -18,7 +18,8 @@ playing around with CI/CD pipelines to automate building custom RHEL images to
 use for development/testing. That's my current use-case, but I'm sure there are
 many reasons you might want to stand up self-hosted runners that are Red Hat
 flavored. Some things in the Red Hat ecosystem are tough to do without a system
-registered with Red Hat Subscription Manager.
+registered with Red Hat Subscription Manager. SELinux is worth figuring out for
+secure enterprise contexts.
 
 ## 1. Create github-runner system user
 
