@@ -41,7 +41,7 @@ title: Projects
     icon="document-text"
   >}}
   {{< card
-    link="https://kraker.github.io/notes/"
+    link="https://kraker.codeberg.page/notes/"
     title="Notes"
     subtitle="A second brain — open-source markdown notes on bash, Python, Linux, RHEL, Ansible, and whatever I'm learning."
     icon="pencil"
