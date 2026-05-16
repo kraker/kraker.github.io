@@ -91,23 +91,28 @@ menu:
       url: https://github.com/kraker
       params:
         icon: github
-    - name: LinkedIn
+    - name: Codeberg
       weight: 8
+      url: https://codeberg.org/kraker
+      params:
+        icon: codeberg
+    - name: LinkedIn
+      weight: 9
       url: https://www.linkedin.com/in/alexkraker/
       params:
         icon: linkedin
     - name: Bluesky
-      weight: 9
+      weight: 10
       url: https://bsky.app/profile/alexkraker.bsky.social
       params:
         icon: bluesky
     - name: Substack
-      weight: 10
+      weight: 11
       url: https://substack.com/@alexkraker
       params:
         icon: substack
     - name: Email
-      weight: 11
+      weight: 12
       url: mailto:contact@alexkraker.com
       params:
         icon: mail
