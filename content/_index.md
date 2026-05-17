@@ -61,7 +61,7 @@ toc: false
   {{< hextra/feature-card
     title="RHCSA study guide"
     subtitle="Open-source guide for the EX200 exam. Widely used — ProLUG's standing recommend."
-    link="https://kraker.github.io/rhcsa/"
+    link="https://kraker.codeberg.page/rhcsa/"
   >}}
   {{< hextra/feature-card
     title="Work with me"

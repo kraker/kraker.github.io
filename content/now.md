@@ -24,7 +24,7 @@ the EX200 Exam" _(working title)_\
 _[Working manuscript](https://kraker.github.io/rhcsa-field-manual/)_
 
 This was a natural evolution of [The RHCSA Study
-Guide](https://github.com/kraker/rhcsa) that was collated with the help of
+Guide](https://codeberg.org/kraker/rhcsa) that was collated with the help of
 AI to help me study for the exam. To my complete surprise, this has
 become a relatively popular resource circulated among the
 [ProLUG](https://prolug.org/) Discord community and the RHEL 9 to RHEL 10 update

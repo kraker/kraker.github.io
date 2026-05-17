@@ -6,13 +6,13 @@ title: Projects
 
 {{< cards >}}
   {{< card
-    link="https://kraker.github.io/rhcsa/"
+    link="https://kraker.codeberg.page/rhcsa/"
     title="RHCSA Study Guide"
     subtitle="Open-source guide to the RHCSA EX200 exam. Earned ProLUG's standing recommend."
     icon="book-open"
   >}}
   {{< card
-    link="https://kraker.github.io/rhce/"
+    link="https://kraker.codeberg.page/rhce/"
     title="RHCE Study Guide"
     subtitle="Open-source guide to the RHCE EX294 exam — Ansible automation on RHEL."
     icon="book-open"
