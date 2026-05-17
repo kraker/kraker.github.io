@@ -11,15 +11,16 @@ This is a repost of my GitHub profile announcement that I'm moving to Codeberg.
 Read the original at [Moving to Codeberg](https://github.com/kraker).
 {{< /callout >}}
 
-## Moving to Codeberg
-
 There's a certain irony in the fact that I never felt the need to create a
 GitHub profile README until now. I'm creating this mostly to let folks who may
 look for me here that I've moved to Codeberg at [codeberg.org/kraker](https://codeberg.org/kraker).
 
 I'm still in the process of migrating, and some of my projects are still hosted
 on GitHub for now. But if you're looking for anything I'm building, you're more
-likely to find it over on Codeberg.
+likely to find it over on Codeberg. I'm not planning on leaving GitHub
+completely though and I'll likely maintain a presence here for projects where
+it's needed for collaboration. But I intend to move all of my own open source
+projects to Codeberg.
 
 There are many reasons I've decided to migrate off the GitHub platform, but it's
 mostly due to what can probably be summed up as "enshittification". I'm not here
